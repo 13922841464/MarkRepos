@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingLeft="@dimen/margin_large_more"
+    android:paddingRight="@dimen/margin_large_more">
+
+    <RelativeLayout
+        android:id="@+id/dialog_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_dialog_topbar"
+        android:background="@color/color_bg_topbar"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/margin_normal"
+            style="@style/font_dialog_title"
+            android:text="@string/app_name" />
+
+        <ImageButton
+            android:id="@+id/dialog_close_btn"
+            android:layout_width="@dimen/height_dialog_topbar"
+            android:layout_height="@dimen/height_dialog_topbar"
+            android:background="@drawable/selector_default_button"
+            android:src="@drawable/dialog_close"
+            android:padding="@dimen/margin_small_more"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_title_layout"
+        android:background="@color/color_bg_base"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bg_base"
+        android:layout_below="@+id/dialog_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/dialog_button_left"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_dialog_topbar"
+                android:layout_weight="1"
+                android:background="@drawable/selector_default_button"
+                android:text="@string/ok"
+                android:gravity="center"
+                android:textColor="@color/color_default_text"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/dialog_button_right"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_dialog_topbar"
+                android:layout_weight="1"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/selector_default_button"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:textColor="@color/color_default_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fragment 切换动画时间 -->
+    <integer name="fragment_anim_time">250</integer>
+</resources>

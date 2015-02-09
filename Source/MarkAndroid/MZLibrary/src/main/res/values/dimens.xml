@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 默认的边距 -->
+    <dimen name="margin_normal">15dp</dimen>
+    <!-- 加大的边距 -->
+    <dimen name="margin_large">25dp</dimen>
+    <!-- 更大的边距 -->
+    <dimen name="margin_large_more">40dp</dimen>
+    <!-- 缩小的边距 -->
+    <dimen name="margin_small">10dp</dimen>
+    <!-- 更小的边距 -->
+    <dimen name="margin_small_more">5dp</dimen>
+
+    <!-- 标题栏高度 -->
+    <dimen name="height_topbar">50dp</dimen>
+    <!-- Dialog 标题栏高度 -->
+    <dimen name="height_dialog_topbar">40dp</dimen>
+</resources>

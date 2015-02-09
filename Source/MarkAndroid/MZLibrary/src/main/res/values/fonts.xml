@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用于标题区域 -->
+    <style name="font_title">
+        <item name="android:textColor">@color/color_font_text</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 应用于Dialog标题区域 -->
+    <style name="font_dialog_title">
+        <item name="android:textColor">@color/color_font_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

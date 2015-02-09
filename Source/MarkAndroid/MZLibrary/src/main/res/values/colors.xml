@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 背景色 -->
+    <color name="color_bg_base">#2E3236</color>
+    <color name="color_bg_topbar">#384E77</color>
+    <color name="color_bg_drawer">#181820</color>
+    <color name="color_bg_drawer_item">#2E3236</color>
+    <color name="color_bg_button">@color/color_bg_topbar</color>
+    <color name="color_bg_button_press">#2B2B2B</color>
+    <color name="color_bg_button_disable">@color/color_font_title</color>
+
+    <!-- 文字颜色 -->
+    <color name="color_font_base">#FBF9F7</color>
+    <color name="color_font_title">#A7A7AB</color>
+    <color name="color_font_text">#F0F0F0</color>
+    <color name="color_font_text_disable">#696969</color>
+    <color name="color_font_text2">#A8A8AC</color>
+    <color name="color_font_spec">#5B8FB4</color>
+</resources>
