@@ -3,10 +3,9 @@ package com.markzhai.adultol.views;
 import android.os.AsyncTask;
 
 import com.markzhai.adultol.R;
-import com.markzhai.adultol.model.Redirect;
 import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.framework.page.FragmentRequest;
-import com.markzhai.library.utils.AppUtils;
+import com.markzhai.library.framework.page.FragmentType;
 
 /**
  * Created by marktlzhai on 2015/2/4.
@@ -60,7 +59,7 @@ public class SplashFragment extends BaseFragment {
                 return;
             }
 
-            startFragment(Redirect.LOGIN);
+            startFragment(new FragmentRequest(FragmentType.APP, HomeFragment.class, false, false, null));
             redirectAction = null;
         }
     }

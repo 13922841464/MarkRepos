@@ -19,6 +19,8 @@ public class DefaultFragmentManager {
 
     private FragmentManager fragmentManager;
 
+    private BaseFragment currentFragment;
+
     public DefaultFragmentManager(BaseActivity baseActivity) {
         this.baseActivity = baseActivity;
         this.fragmentManager = this.baseActivity.getSupportFragmentManager();
@@ -42,7 +44,7 @@ public class DefaultFragmentManager {
     /**
      * 增加一个Fragment
      */
-    public boolean insertFragmentToActivity(FragmentRequest request) {
+    public boolean insertFragmentToActivity(int layoutID, FragmentRequest request) {
         BaseFragment fragment = getFragmentInstance(request);
 
         if (fragment != null) {
@@ -55,13 +57,21 @@ public class DefaultFragmentManager {
                 ft.setCustomAnimations(request.getFragmentType().getEnterAnim(), request.getFragmentType().getExitAnim());
             }
 
-            ft.replace(R.id.fragment_container, fragment, fragment.getFragmentTag());
+            ft.replace(layoutID, fragment, fragment.getFragmentTag());
+
+            if(layoutID == R.id.fragment_container) {
+                currentFragment = fragment;
+            }
 
             ft.commitAllowingStateLoss();
             return true;
         } else {
             return false;
         }
+    }
+
+    public BaseFragment getCurrentFragment() {
+        return currentFragment;
     }
 
     /**

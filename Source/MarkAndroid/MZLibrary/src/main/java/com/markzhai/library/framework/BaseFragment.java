@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
+import com.markzhai.library.R;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.utils.UIUtils;
 
@@ -110,7 +111,11 @@ public abstract class BaseFragment extends RoboFragment {
     }
 
     public void startFragment(FragmentRequest request) {
-        baseActivity.startFragment(request);
+        startFragment(R.id.fragment_container, request);
+    }
+
+    public void startFragment(int layoutID, FragmentRequest request) {
+        baseActivity.startFragment(layoutID, request);
     }
 
     public boolean isEquals(Object o) {

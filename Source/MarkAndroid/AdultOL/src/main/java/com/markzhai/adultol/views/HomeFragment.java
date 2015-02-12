@@ -1,12 +1,15 @@
 package com.markzhai.adultol.views;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.markzhai.adultol.R;
+import com.markzhai.adultol.views.widget.DrawerMenu;
 import com.markzhai.library.framework.BaseFragment;
-import com.markzhai.widget.viewpagerindicator.TabPageIndicator;
+import com.markzhai.library.utils.UIUtils;
 
 import roboguice.inject.InjectView;
 
@@ -15,11 +18,13 @@ import roboguice.inject.InjectView;
  */
 public class HomeFragment extends BaseFragment {
 
-    @InjectView(R.id.home_pager_ind)
-    private TabPageIndicator pagerIndicator;
+    @InjectView(R.id.drawer_layout)
+    private DrawerLayout drawerLayout;
 
-    @InjectView(R.id.home_pager)
-    private ViewPager homePager;
+    @InjectView(R.id.start_drawer)
+    private RelativeLayout startDrawer;
+
+    private DrawerMenu drawerMenu;
 
     @Override
     public int getLayoutResId() {
@@ -28,22 +33,27 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void init() {
-        homePager.setAdapter(new FragmentPagerAdapter(getBaseActivity().getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return new SplashFragment();
-            }
+        drawerMenu = new DrawerMenu(getBaseActivity());
+        startDrawer.addView(drawerMenu, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    }
 
-            @Override
-            public int getCount() {
-                return 3;
-            }
+    public boolean isDrawerOpened() {
+        return drawerLayout.isDrawerOpen(Gravity.START);
+    }
 
-            @Override
-            public CharSequence getPageTitle(int position) {
-                return "Title " + position;
-            }
-        });
-        pagerIndicator.setViewPager(homePager);
+    public void openDrawer() {
+        drawerLayout.openDrawer(Gravity.START);
+    }
+
+    public void closeDrawer() {
+        drawerLayout.closeDrawer(Gravity.START);
+    }
+
+    public void toggleDrawer() {
+        if (isDrawerOpened()) {
+            closeDrawer();
+        } else {
+            openDrawer();
+        }
     }
 }

@@ -1,9 +1,11 @@
 package com.markzhai.library.utils;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -76,7 +78,7 @@ public class UIUtils {
         for (int i = 0; i < count; i++) {
             View v = group.getChildAt(i);
             if (v instanceof TextView) {
-                setTypeFace((TextView)v, tf);
+                setTypeFace((TextView) v, tf);
             }
 
             if (v instanceof ViewGroup) {
@@ -85,10 +87,25 @@ public class UIUtils {
         }
     }
 
+    /**
+     * 设置typeface
+     */
     public static void setTypeFace(TextView tv, Typeface tf) {
         if (tv == null) {
             return;
         }
         tv.setTypeface(tf);
+    }
+
+    public static TextView getTestView(Context context, String message) {
+        TextView textView = new TextView(context);
+        textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        textView.setBackgroundColor(Color.RED);
+        textView.setText(message);
+        textView.setGravity(Gravity.CENTER);
+        textView.setTextColor(Color.BLACK);
+        textView.setTextSize(30);
+
+        return textView;
     }
 }

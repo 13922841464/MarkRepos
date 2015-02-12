@@ -1,6 +1,5 @@
 package com.markzhai.library.framework;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Window;
@@ -10,7 +9,6 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.markzhai.library.R;
 import com.markzhai.library.framework.page.DefaultFragmentManager;
 import com.markzhai.library.framework.page.FragmentRequest;
-import com.tencent.tauth.Tencent;
 
 import roboguice.activity.RoboFragmentActivity;
 
@@ -28,7 +26,7 @@ public abstract class BaseActivity extends RoboFragmentActivity {
     /**
      * Frame管理
      */
-    private DefaultFragmentManager defaultFragmentManager;
+    protected DefaultFragmentManager defaultFragmentManager;
 
     /**
      * 是否为全屏
@@ -53,19 +51,19 @@ public abstract class BaseActivity extends RoboFragmentActivity {
         httpClient = new AsyncHttpClient();
         defaultFragmentManager = new DefaultFragmentManager(this);
         setContentView(R.layout.activity_main);
-        startFragment(installHome());
+        startFragment(R.id.fragment_container, installHome());
     }
 
     /**
      * 开启一个Frame
      */
-    public void startFragment(FragmentRequest request) {
+    public void startFragment(int layoutID, FragmentRequest request) {
         // 设置是否全屏
         if (!fullscreen == request.isFullScreen()) {
             setFullscreenn(request.isFullScreen());
         }
 
-        defaultFragmentManager.insertFragmentToActivity(request);
+        defaultFragmentManager.insertFragmentToActivity(layoutID, request);
     }
 
     /**
@@ -89,13 +87,5 @@ public abstract class BaseActivity extends RoboFragmentActivity {
 
     public boolean isFullscreen() {
         return fullscreen;
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(BaseApplication.tencent != null) {
-            BaseApplication.tencent.onActivityResult(requestCode, resultCode, data);
-        }
     }
 }

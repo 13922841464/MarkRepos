@@ -1,14 +1,12 @@
 package com.markzhai.library.framework;
 
 import android.app.Application;
-import android.content.pm.PackageManager;
 import android.util.DisplayMetrics;
 
 import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.utils.NLog;
 import com.markzhai.library.utils.SPUtils;
 import com.markzhai.library.utils.SigntureUtil;
-import com.tencent.tauth.Tencent;
 
 /**
  * Created by marktlzhai on 2015/1/24.
@@ -36,8 +34,6 @@ public class BaseApplication extends Application {
 
     protected static Application instance;
 
-    public static Tencent tencent;
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -62,13 +58,6 @@ public class BaseApplication extends Application {
         NLog.d("============== Signture Information===============");
         NLog.d(SigntureUtil.getSignture(instance));
         NLog.d("============== Signture Information===============");
-    }
-
-    /**
-     * 初始化 Tencent
-     */
-    public void initTencent(String appid) {
-        tencent = Tencent.createInstance(appid, this);
     }
 
     @Override

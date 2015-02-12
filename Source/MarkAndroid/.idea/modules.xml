@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AdultOL/AdultOL.iml" filepath="$PROJECT_DIR$/AdultOL/AdultOL.iml" />
       <module fileurl="file://$PROJECT_DIR$/MZLibrary/MZLibrary.iml" filepath="$PROJECT_DIR$/MZLibrary/MZLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Source.iml" filepath="$PROJECT_DIR$/Source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarkAndroid.iml" filepath="$PROJECT_DIR$/MarkAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
     </modules>
   </component>

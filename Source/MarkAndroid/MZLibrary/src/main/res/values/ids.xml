@@ -2,8 +2,8 @@
 <resources>
     <item name="fragment_container" type="id" />
 
-    <!-- Drawer Activity -->
+    <!-- Drawer Layout -->
     <item name="drawer_layout" type="id" />
-    <item name="drawer_layout_left" type="id" />
-    <item name="drawer_layout_right" type="id" />
+    <item name="drawer_container" type="id" />
+    <item name="start_drawer" type="id" />
 </resources>

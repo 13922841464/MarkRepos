@@ -9,6 +9,5 @@ public class App extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        initTencent("1104231509");
     }
 }
