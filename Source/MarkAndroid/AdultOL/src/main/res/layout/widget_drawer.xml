@@ -4,4 +4,114 @@
     android:layout_height="match_parent"
     android:background="@color/color_bg_drawer">
 
+    <RelativeLayout
+        android:id="@+id/account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/account_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/margin_small_more"
+            android:src="@drawable/account_icon" />
+
+        <RelativeLayout
+            android:id="@+id/account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/account_icon"
+            android:layout_alignTop="@+id/account_icon"
+            android:layout_toRightOf="@+id/account_icon">
+
+            <View
+                android:id="@+id/account_center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_small_more"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/account_center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/drawer_title_font"
+                    android:text="账号等级" />
+
+                <TextView
+                    android:id="@+id/account_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/drawer_spec_font"
+                    android:layout_marginLeft="@dimen/margin_small_more"
+                    android:text="VIP" />
+
+                <ImageView
+                    android:id="@+id/account_vip_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/account_vip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/drawer_title_font"
+                    android:text="成豆余额" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/drawer_spec_font"
+                    android:layout_marginLeft="@dimen/margin_small_more"
+                    android:text="9999" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/account_info"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/drawer_button"
+                android:text="充值" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                style="@style/drawer_button"
+                android:text="购买VIP" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/account_layout"
+        android:background="@color/color_bg_drawer_item"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"/>
+
 </RelativeLayout>
