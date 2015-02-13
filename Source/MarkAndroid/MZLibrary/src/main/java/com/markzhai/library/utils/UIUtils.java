@@ -99,7 +99,6 @@ public class UIUtils {
 
     public static TextView getTestView(Context context, String message) {
         TextView textView = new TextView(context);
-        textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         textView.setBackgroundColor(Color.RED);
         textView.setText(message);
         textView.setGravity(Gravity.CENTER);

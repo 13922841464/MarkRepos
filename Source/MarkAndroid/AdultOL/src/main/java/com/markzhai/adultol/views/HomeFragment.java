@@ -1,15 +1,14 @@
 package com.markzhai.adultol.views;
 
-import android.support.v4.widget.DrawerLayout;
-import android.view.Gravity;
-import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 
 import com.markzhai.adultol.R;
-import com.markzhai.adultol.views.widget.DrawerMenu;
 import com.markzhai.library.framework.BaseFragment;
-import com.markzhai.library.utils.UIUtils;
+import com.markzhai.widget.viewpagerindicator.IconPagerAdapter;
+import com.markzhai.widget.viewpagerindicator.TabPageIndicator;
 
 import roboguice.inject.InjectView;
 
@@ -18,13 +17,12 @@ import roboguice.inject.InjectView;
  */
 public class HomeFragment extends BaseFragment {
 
-    @InjectView(R.id.drawer_layout)
-    private DrawerLayout drawerLayout;
+    @InjectView(R.id.home_pager_indicator)
+    private TabPageIndicator pageIndicator;
 
-    @InjectView(R.id.start_drawer)
-    private RelativeLayout startDrawer;
-
-    private DrawerMenu drawerMenu;
+    @InjectView(R.id.home_pager)
+    private ViewPager homePager;
+    private HomePagerAdapter homePagerAdapter;
 
     @Override
     public int getLayoutResId() {
@@ -33,27 +31,30 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void init() {
-        drawerMenu = new DrawerMenu(getBaseActivity());
-        startDrawer.addView(drawerMenu, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        homePagerAdapter = new HomePagerAdapter(getBaseActivity().getSupportFragmentManager());
+        homePager.setAdapter(homePagerAdapter);
+        pageIndicator.setViewPager(homePager);
     }
 
-    public boolean isDrawerOpened() {
-        return drawerLayout.isDrawerOpen(Gravity.START);
-    }
+    class HomePagerAdapter extends FragmentPagerAdapter implements IconPagerAdapter {
 
-    public void openDrawer() {
-        drawerLayout.openDrawer(Gravity.START);
-    }
+        public HomePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
 
-    public void closeDrawer() {
-        drawerLayout.closeDrawer(Gravity.START);
-    }
+        @Override
+        public Fragment getItem(int position) {
+            return null;
+        }
 
-    public void toggleDrawer() {
-        if (isDrawerOpened()) {
-            closeDrawer();
-        } else {
-            openDrawer();
+        @Override
+        public int getIconResId(int index) {
+            return 0;
+        }
+
+        @Override
+        public int getCount() {
+            return 0;
         }
     }
 }

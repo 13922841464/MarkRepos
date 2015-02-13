@@ -4,4 +4,17 @@
     <string name="app_name">成人OL</string>
     <string name="app_name_en">Adult OnLine</string>
 
+    <!-- Home Fragment-->
+    <string name="novel">H 小说</string>
+    <string name="novel_luanlun">乱伦</string>
+    <string name="novel_xiaoyuan">校园</string>
+    <string name="novel_gudian">古典</string>
+    <string name="novel_zhifu">制服</string>
+    <string name="novel_nuedai">虐待</string>
+    <string name="novel_dushi">都市</string>
+    <string name="novel_lingyi">灵异</string>
+    <string name="novel_qita">其他</string>
+
+    <string name="image">H 图片</string>
+    <string name="movie">H 电影</string>
 </resources>

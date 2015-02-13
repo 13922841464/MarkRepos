@@ -4,6 +4,7 @@
     <color name="color_bg_base">#2E3236</color>
     <color name="color_bg_topbar">#384E77</color>
     <color name="color_bg_drawer">#181820</color>
+    <color name="color_bg_drawer_divider">#000000</color>
     <color name="color_bg_drawer_item">#2E3236</color>
     <color name="color_bg_button">@color/color_bg_topbar</color>
     <color name="color_bg_button_press">#2B2B2B</color>

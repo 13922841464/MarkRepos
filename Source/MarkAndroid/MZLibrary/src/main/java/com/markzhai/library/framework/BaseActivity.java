@@ -26,7 +26,7 @@ public abstract class BaseActivity extends RoboFragmentActivity {
     /**
      * Frame管理
      */
-    protected DefaultFragmentManager defaultFragmentManager;
+    protected static DefaultFragmentManager defaultFragmentManager;
 
     /**
      * 是否为全屏
@@ -87,5 +87,9 @@ public abstract class BaseActivity extends RoboFragmentActivity {
 
     public boolean isFullscreen() {
         return fullscreen;
+    }
+
+    public static BaseFragment getCurrentFragment() {
+        return defaultFragmentManager.getCurrentFragment();
     }
 }
