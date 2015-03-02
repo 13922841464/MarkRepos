@@ -24,6 +24,10 @@ public abstract class BaseFragment extends RoboFragment {
 
     public abstract void init();
 
+    public void showToUser() {
+
+    }
+
     public Typeface installFont() {
         return null;
     }
@@ -123,6 +127,14 @@ public abstract class BaseFragment extends RoboFragment {
             return ((BaseFragment) o).getFragmentTag().equals(getFragmentTag());
         } else {
             return false;
+        }
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            showToUser();
         }
     }
 }

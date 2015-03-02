@@ -1,1 +1,1 @@
-include ':MZLibrary', ':AdultOL', ':ViewPagerIndicator'
+include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':AdultVideo'

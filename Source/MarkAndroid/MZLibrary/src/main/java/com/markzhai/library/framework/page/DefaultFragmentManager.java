@@ -15,7 +15,7 @@ import com.markzhai.library.utils.NLog;
 public class DefaultFragmentManager {
     private static final String TAG = DefaultFragmentManager.class.getSimpleName();
 
-    private BaseActivity baseActivity;
+    private static BaseActivity baseActivity;
 
     private FragmentManager fragmentManager;
 
@@ -36,8 +36,19 @@ public class DefaultFragmentManager {
      * @param request
      * @return
      */
-    public BaseFragment getFragmentInstance(FragmentRequest request) {
+    public static BaseFragment getFragmentInstance(FragmentRequest request) {
         BaseFragment fragment = (BaseFragment) Fragment.instantiate(baseActivity, request.getFragmentClass().getName(), request.getData());
+        return fragment;
+    }
+
+
+
+    /**
+     * 根据class获取一个fragment实例
+     * @return
+     */
+    public static BaseFragment getFragmentInstance(Class<? extends Fragment> fragmentClass) {
+        BaseFragment fragment = (BaseFragment) Fragment.instantiate(baseActivity, fragmentClass.getName());
         return fragment;
     }
 
