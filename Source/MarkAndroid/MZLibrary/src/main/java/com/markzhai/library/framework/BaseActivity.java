@@ -2,8 +2,10 @@ package com.markzhai.library.framework;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.markzhai.library.R;
@@ -18,6 +20,9 @@ import roboguice.activity.RoboFragmentActivity;
 public abstract class BaseActivity extends RoboFragmentActivity {
 
     protected abstract FragmentRequest installHome();
+
+    private long waitTime = 2000;
+    private long touchTime = 0;
 
     public Typeface installFont() {
         return null;
@@ -91,5 +96,20 @@ public abstract class BaseActivity extends RoboFragmentActivity {
 
     public static BaseFragment getCurrentFragment() {
         return defaultFragmentManager.getCurrentFragment();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN && KeyEvent.KEYCODE_BACK == keyCode) {
+            long currentTime = System.currentTimeMillis();
+            if ((currentTime - touchTime) >= waitTime) {
+                Toast.makeText(this, R.string.exit_press_again, Toast.LENGTH_SHORT).show();
+                touchTime = currentTime;
+            } else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

@@ -10,6 +10,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected FragmentRequest installHome() {
-        return new FragmentRequest(FragmentType.HOME, FragmentHome.class, false, true, null);
+        return new FragmentRequest(FragmentType.HOME, FragmentHome.class, false, false, null);
     }
 }
