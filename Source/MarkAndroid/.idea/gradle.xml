@@ -8,7 +8,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AdultVideo" />
             <option value="$PROJECT_DIR$/MZLibrary" />
             <option value="$PROJECT_DIR$/ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/apkinstall" />

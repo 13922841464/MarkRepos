@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AdultVideo/AdultVideo.iml" filepath="$PROJECT_DIR$/AdultVideo/AdultVideo.iml" />
       <module fileurl="file://$PROJECT_DIR$/MZLibrary/MZLibrary.iml" filepath="$PROJECT_DIR$/MZLibrary/MZLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/MarkAndroid.iml" filepath="$PROJECT_DIR$/MarkAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
