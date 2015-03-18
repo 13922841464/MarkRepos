@@ -9,21 +9,7 @@
   <component name="SvnBranchConfigurationManager">
     <option name="myConfigurationMap">
       <map>
-        <entry key="E:/ESecure">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="trunkUrl" value="" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="trunkUrl" value="" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
-        <entry key="E:/emqqsecure_proj">
           <value>
             <SvnBranchConfiguration>
               <option name="trunkUrl" value="" />

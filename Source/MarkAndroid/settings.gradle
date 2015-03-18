@@ -1,1 +1,1 @@
-include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall'
+include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':MediaGather'

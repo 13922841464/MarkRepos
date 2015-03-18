@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">聚媒</string>
+
+    <!-- 类别 -->
+    <string name="category_movie">看电影</string>
+    <string name="category_news">看新闻</string>
+    <string name="category_music">听音乐</string>
+    <string name="category_picture">看美图</string>
+    <string name="category_novel">看小说</string>
+</resources>
