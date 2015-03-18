@@ -14,6 +14,8 @@
 
     <!-- 标题栏高度 -->
     <dimen name="height_topbar">50dp</dimen>
+    <!-- 标题栏图标高度 -->
+    <dimen name="height_topbar_icon">40dp</dimen>
     <!-- Dialog 标题栏高度 -->
     <dimen name="height_dialog_topbar">40dp</dimen>
 </resources>

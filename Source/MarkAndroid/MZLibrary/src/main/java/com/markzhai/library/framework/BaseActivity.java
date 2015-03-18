@@ -99,8 +99,10 @@ public abstract class BaseActivity extends RoboFragmentActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN && KeyEvent.KEYCODE_BACK == keyCode) {
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            super.onBackPressed();
+        } else {
             long currentTime = System.currentTimeMillis();
             if ((currentTime - touchTime) >= waitTime) {
                 Toast.makeText(this, R.string.exit_press_again, Toast.LENGTH_SHORT).show();
@@ -108,8 +110,6 @@ public abstract class BaseActivity extends RoboFragmentActivity {
             } else {
                 finish();
             }
-            return true;
         }
-        return super.onKeyDown(keyCode, event);
     }
 }

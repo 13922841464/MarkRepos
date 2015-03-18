@@ -13,8 +13,10 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.markzhai.library.R;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.utils.UIUtils;
+import com.markzhai.library.widget.MZTopbar;
 
 import roboguice.fragment.RoboFragment;
+import roboguice.inject.InjectView;
 
 /**
  * Created by marktlzhai on 2015/1/24.
@@ -23,6 +25,10 @@ public abstract class BaseFragment extends RoboFragment {
     public abstract int getLayoutResId();
 
     public abstract void init();
+
+    public void initTopbar(MZTopbar topbar) {
+
+    }
 
     public void showToUser() {
 
@@ -37,6 +43,8 @@ public abstract class BaseFragment extends RoboFragment {
     private View rootView;
 
     protected static final Handler handler = new Handler();
+
+    private MZTopbar topbar;
 
     /**
      * Async-http-client
@@ -62,6 +70,11 @@ public abstract class BaseFragment extends RoboFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         httpClient = new AsyncHttpClient();
+
+        topbar = (MZTopbar) rootView.findViewById(R.id.topbar);
+        if(topbar != null) {
+            initTopbar(topbar);
+        }
     }
 
     @Override
@@ -112,6 +125,10 @@ public abstract class BaseFragment extends RoboFragment {
 
     public String getFragmentTag() {
         return getClass().getName();
+    }
+
+    public void startFragment(Class<? extends BaseFragment> fragmentClass) {
+        startFragment(new FragmentRequest(fragmentClass));
     }
 
     public void startFragment(FragmentRequest request) {

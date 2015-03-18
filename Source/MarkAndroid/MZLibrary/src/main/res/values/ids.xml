@@ -6,4 +6,7 @@
     <item name="drawer_layout" type="id" />
     <item name="drawer_container" type="id" />
     <item name="start_drawer" type="id" />
+
+    <!-- Topbar -->
+    <item name="topbar" type="id" />
 </resources>

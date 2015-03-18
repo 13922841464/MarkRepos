@@ -23,4 +23,14 @@
         <item name="android:textColor">@color/color_font_text</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <!-- 应用于Topbar文字 -->
+    <style name="font_topbar_title">
+        <item name="android:textColor">@color/color_font_base</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:shadowColor">@color/color_font_spec</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
 </resources>

@@ -4,9 +4,12 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.markzhai.library.framework.BaseFragment;
-import com.markzhai.library.utils.DBUtils;
 import com.markzhai.mediagather.R;
-import com.markzhai.mediagather.core.model.sys.Configuration;
+import com.markzhai.mediagather.core.view.fragment.music.FragmentMusicHome;
+import com.markzhai.mediagather.core.view.fragment.news.FragmentNewsHome;
+import com.markzhai.mediagather.core.view.fragment.novel.FragmentNovelHome;
+import com.markzhai.mediagather.core.view.fragment.picture.FragmentPictureHome;
+import com.markzhai.mediagather.core.view.fragment.video.FragmentMovieHome;
 
 import roboguice.inject.InjectView;
 
@@ -68,22 +71,22 @@ public class FragmentHome extends BaseFragment implements View.OnClickListener {
     }
 
     private void toMovie() {
-
+        startFragment(FragmentMovieHome.class);
     }
 
     private void toPicture() {
-
+        startFragment(FragmentPictureHome.class);
     }
 
     private void toMusic() {
-
+        startFragment(FragmentMusicHome.class);
     }
 
     private void toNews() {
-
+        startFragment(FragmentNewsHome.class);
     }
 
     private void toNovel() {
-
+        startFragment(FragmentNovelHome.class);
     }
 }
