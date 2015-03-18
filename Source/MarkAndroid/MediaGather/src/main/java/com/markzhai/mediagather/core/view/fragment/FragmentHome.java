@@ -4,7 +4,9 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.markzhai.library.framework.BaseFragment;
+import com.markzhai.library.utils.DBUtils;
 import com.markzhai.mediagather.R;
+import com.markzhai.mediagather.core.model.sys.Configuration;
 
 import roboguice.inject.InjectView;
 
@@ -48,14 +50,19 @@ public class FragmentHome extends BaseFragment implements View.OnClickListener {
 
         switch (clickID) {
             case R.id.category_movie:
+                toMovie();
                 break;
             case R.id.category_picture:
+                toPicture();
                 break;
             case R.id.category_music:
+                toMusic();
                 break;
             case R.id.category_news:
+                toNews();
                 break;
             case R.id.category_novel:
+                toNovel();
                 break;
         }
     }

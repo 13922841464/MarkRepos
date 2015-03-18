@@ -34,118 +34,31 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.markzhai.apkinstall" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.markzhai.mediagather" />
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="bfcae5d8-488b-43ba-b1b6-0cf2984e4fde" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/category_movie.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/category_music.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/category_news.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/category_novel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/category_picture.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/controller" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-hdpi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-mdpi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xhdpi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable/ic_launcher_web.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/layout" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/libs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/movie_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/music" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/music_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/news" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/news_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/novel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/novel_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/picture" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/picture_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/splash_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/utils" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/values" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/video" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentIntro.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentSplash.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/controller/MZController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/MediaGather.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/MusicController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/music/MusicModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/NewsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/news/NewsModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/NovelController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/novel/NovelModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/PictureController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/picture/PictureModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/VideoController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/video/VideoModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/utils/VideoUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_async_http_1_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/asm_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/cglib_2_2_1_v20090111.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/layout/fragment_home.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/layout/fragment_intro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/layout/fragment_splash.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/guice_3_0_no_aop.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/libs/library.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/library_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/library_1_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/library_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/roboguice_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_movie.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_music.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_news.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_novel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_picture.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/universal_image_loader_1_9_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="C:\DEV\MarkAndroid\聚媒\unnamed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\DEV\MarkAndroid\聚媒" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary" afterPath="$PROJECT_DIR$/MZLibrary" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$" afterPath="$PROJECT_DIR$" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViewPagerIndicator" afterPath="$PROJECT_DIR$/ViewPagerIndicator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apkinstall" afterPath="$PROJECT_DIR$/apkinstall" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apkinstall/apkinstall.iml" afterPath="$PROJECT_DIR$/apkinstall/apkinstall.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary/src/main/res/values/fonts.xml" afterPath="$PROJECT_DIR$/MZLibrary/src/main/res/values/fonts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/MZLibrary/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/sys" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/App.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/CollectionUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/sys/Configuration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/DBUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/model/MZModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/activeandroid_3_1_0_SNAPSHOT.xml" />
+      <change type="MOVED" beforePath="C:\DEV\MarkAndroid\MZLibrary\src\main\java\com\markzhai\library\framework\controller\MZController.java" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/controller/MZController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/BaseApplication.java" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/BaseApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java" afterPath="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/controller/MZController.java" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/controller/MZController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary/MZLibrary.iml" afterPath="$PROJECT_DIR$/MZLibrary/MZLibrary.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MediaGather/MediaGather.iml" afterPath="$PROJECT_DIR$/MediaGather/MediaGather.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MZLibrary/build.gradle" afterPath="$PROJECT_DIR$/MZLibrary/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="C:\DEV\MarkAndroid\MZLibrary\src\main\java\com\markzhai\library\framework\controller" afterPath="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/controller" />
     </list>
     <ignored path="MarkAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -168,101 +81,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MusicController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/MusicController.java">
+      <file leaf-file-name="Configuration.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/sys/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
+            <state vertical-scroll-proportion="0.35040984" vertical-offset="0" max-vertical-offset="488">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PictureController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/PictureController.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
+              <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+              <folding>
+                <element signature="e#520#538#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/NewsController.java">
+      <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="532">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NovelController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/controller/NovelController.java">
+      <file leaf-file-name="FragmentHome.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1767">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MusicModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/music/MusicModel.java">
+      <file leaf-file-name="DBUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/DBUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1142" max-vertical-offset="1710">
+              <caret line="67" column="69" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/news/NewsModel.java">
+      <file leaf-file-name="BaseApplication.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/BaseApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NovelModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/novel/NovelModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PictureModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/picture/PictureModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/video/VideoModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoUtils.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/utils/VideoUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1380814" vertical-offset="0" max-vertical-offset="688">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1082" max-vertical-offset="1881">
+              <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -1982,7 +1865,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="8558911033454" />
+        <entry key="$PROJECT_DIR$" value="8559245913485" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2140,6 +2023,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.roboguice/roboguice/2.0/727ccb8f376109d0b5c44abca6f791dccc5c5dbc/roboguice-2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.3/a85588bec3e2c4584d593d3f15df1677321bca72/universal-image-loader-1.9.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar" />
                             <option value="$PROJECT_DIR$/../Tools/SDK/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/3.0/28586dc97c525501329d9a242fc3402041e3572d/guice-3.0-no_aop.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
@@ -2460,7 +2344,6 @@
         <option value="$PROJECT_DIR$/MediaGather/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/MediaGather/build.gradle" />
         <option value="$PROJECT_DIR$/MediaGather/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/MZLibrary/src/main/res/values/fonts.xml" />
         <option value="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/FragmentSplash.java" />
         <option value="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/MainActivity.java" />
@@ -2477,6 +2360,16 @@
         <option value="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_music.xml" />
         <option value="$PROJECT_DIR$/MediaGather/src/main/res/drawable/selector_category_novel.xml" />
         <option value="$PROJECT_DIR$/MediaGather/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/MZLibrary/build.gradle" />
+        <option value="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/model/MZModelTest.java" />
+        <option value="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/model/MZModel.java" />
+        <option value="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/CollectionUtils.java" />
+        <option value="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/BaseApplication.java" />
+        <option value="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/App.java" />
+        <option value="$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/sys/Configuration.java" />
+        <option value="$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/DBUtils.java" />
         <option value="$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java" />
       </list>
     </option>
@@ -2565,7 +2458,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="android.project.structure.last.selected" value="MediaGather" />
+    <property name="android.project.structure.last.selected" value="MZLibrary" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2581,7 +2474,7 @@
       <recent name="C:\DEV\MarkAndroid\MediaGather\src\main\res\mipmap-xxhdpi" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.apkinstall">
+  <component name="RunManager" selected="Android Application.MediaGather">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -2791,10 +2684,15 @@
       <created>1426480055425</created>
       <updated>1426480055425</updated>
     </task>
+    <task id="LOCAL-00001" summary="增加项目MediaGather">
+      <created>1426646959248</created>
+      <updated>1426646959248</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2808,15 +2706,15 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20155902" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42427617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35746104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -2843,115 +2741,13 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="增加项目MediaGather" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加项目MediaGather" />
+    <MESSAGE value="使用ActiveAndroid支持ORM映射。" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用ActiveAndroid支持ORM映射。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="152">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apkinstall/src/main/java/com/markzhai/apkinstall/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13263525" vertical-offset="0" max-vertical-offset="627">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/res/drawable-xxhdpi/splash_bg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/res/drawable-hdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8289703" vertical-offset="0" max-vertical-offset="646">
-          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/res/drawable/ic_launcher_web.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/build/intermediates/manifests/full/debug/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33211678" vertical-offset="160" max-vertical-offset="722">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13118526" vertical-offset="0" max-vertical-offset="869">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/res/values/fonts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="1995">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/page/FragmentRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1425">
-          <caret line="37" column="114" selection-start-line="37" selection-start-column="114" selection-end-line="37" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/MediaGather/build/intermediates/exploded-aar/com.daimajia.androidanimations/library/1.1.3/classes.jar!/com/daimajia/androidanimations/library/specials/HingeAnimator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.84" vertical-offset="0" max-vertical-offset="285">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/MediaGather/build/intermediates/exploded-aar/com.daimajia.androidanimations/library/1.1.3/classes.jar!/com/daimajia/androidanimations/library/fading_entrances/FadeInAnimator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="285">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/83d41901478fa8795254244acbafd03f14224dab/library-2.4.0-sources.jar!/com/nineoldandroids/animation/AnimatorListenerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="874">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/MediaGather/build/intermediates/exploded-aar/com.daimajia.androidanimations/library/1.1.3/classes.jar!/com/daimajia/androidanimations/library/BaseViewAnimator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.56" vertical-offset="0" max-vertical-offset="931">
@@ -3158,28 +2954,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="1634">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MediaGather/libs/library.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/controller/MZController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -3267,8 +3045,159 @@
     <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/utils/VideoUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1380814" vertical-offset="0" max-vertical-offset="688">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40120664" vertical-offset="0" max-vertical-offset="663">
+          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MZLibrary/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="646">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/1342fa5b07c206487c9ec48c384dacd0dfbb8a8d/activeandroid-3.1.0-SNAPSHOT-sources.jar!/com/activeandroid/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="208" max-vertical-offset="5852">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/model/MZModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33158812" vertical-offset="0" max-vertical-offset="573">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/core/controller/MZController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16579406" vertical-offset="0" max-vertical-offset="573">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/1342fa5b07c206487c9ec48c384dacd0dfbb8a8d/activeandroid-3.1.0-SNAPSHOT-sources.jar!/com/activeandroid/query/From.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39965096" vertical-offset="1367" max-vertical-offset="6270">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/3.0/28586dc97c525501329d9a242fc3402041e3572d/guice-3.0-no_aop.jar!/com/google/inject/Inject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27737227" vertical-offset="0" max-vertical-offset="548">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/CollectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2652705" vertical-offset="0" max-vertical-offset="573">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/3.0/28586dc97c525501329d9a242fc3402041e3572d/guice-3.0-no_aop.jar!/com/google/inject/Injector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17335767" vertical-offset="57" max-vertical-offset="893">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/1342fa5b07c206487c9ec48c384dacd0dfbb8a8d/activeandroid-3.1.0-SNAPSHOT-sources.jar!/com/activeandroid/annotation/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73472947" vertical-offset="73" max-vertical-offset="646">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar!/com/activeandroid/annotation/Column.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46422338" vertical-offset="0" max-vertical-offset="1083">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/framework/BaseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1082" max-vertical-offset="1881">
+          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="532">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+          <folding>
+            <element signature="e#520#538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MZLibrary/src/main/java/com/markzhai/library/utils/DBUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1142" max-vertical-offset="1710">
+          <caret line="67" column="69" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/view/fragment/FragmentHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1767">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MediaGather/src/main/java/com/markzhai/mediagather/core/model/sys/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35040984" vertical-offset="0" max-vertical-offset="488">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
