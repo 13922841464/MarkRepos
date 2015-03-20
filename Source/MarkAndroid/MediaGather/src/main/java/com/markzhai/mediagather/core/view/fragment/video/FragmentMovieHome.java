@@ -10,7 +10,7 @@ import com.markzhai.mediagather.R;
 public class FragmentMovieHome extends BaseFragment {
     @Override
     public int getLayoutResId() {
-        return R.layout.fragment_video_home;
+        return R.layout.fragment_movie_home;
     }
 
     @Override
@@ -21,6 +21,5 @@ public class FragmentMovieHome extends BaseFragment {
     @Override
     public void initTopbar(MZTopbar topbar) {
         topbar.setTitle(R.string.category_movie);
-        topbar.setIcon(R.drawable.category_movie);
     }
 }

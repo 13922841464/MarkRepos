@@ -1,6 +1,8 @@
 package com.markzhai.library.widget;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,8 @@ public class MZTopbar extends RelativeLayout {
     private TextView titleView;
 
     private ImageView iconView;
+
+    private ImageView menuView;
 
     public MZTopbar(Context context) {
         super(context);
@@ -41,6 +45,9 @@ public class MZTopbar extends RelativeLayout {
         iconView = (ImageView) rootView.findViewById(R.id.topbar_icon);
         iconView.setImageResource(0);
 
+        menuView = (ImageView) rootView.findViewById(R.id.topbar_menu);
+        menuView.setImageResource(0);
+
         addView(rootView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
     }
 
@@ -52,7 +59,32 @@ public class MZTopbar extends RelativeLayout {
         titleView.setText(title);
     }
 
-    public void setIcon(int iconRes) {
-        iconView.setImageResource(iconRes);
+    public void setIcon(int iconRes, OnClickListener listener) {
+        if (iconRes <= 0) {
+            iconView.setImageDrawable(new ColorDrawable(Color.TRANSPARENT));
+        } else {
+            iconView.setImageResource(iconRes);
+        }
+
+        if (listener == null) {
+            iconView.setClickable(false);
+        } else {
+            iconView.setClickable(true);
+            iconView.setOnClickListener(listener);
+        }
+    }
+
+    public void setMenu(int menuRes, OnClickListener listener) {
+        if (menuRes <= 0) {
+            menuView.setImageDrawable(new ColorDrawable(Color.TRANSPARENT));
+        } else {
+            menuView.setImageResource(menuRes);
+        }
+        if (listener == null) {
+            menuView.setClickable(false);
+        } else {
+            menuView.setClickable(true);
+            menuView.setOnClickListener(listener);
+        }
     }
 }

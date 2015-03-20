@@ -6,14 +6,15 @@
 
     <ImageView
         android:id="@+id/topbar_icon"
-        android:layout_width="@dimen/height_topbar_icon"
-        android:layout_height="@dimen/height_topbar_icon"
+        android:layout_width="@dimen/height_topbar"
+        android:layout_height="@dimen/height_topbar"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/margin_small_more"
-        android:layout_marginRight="@dimen/margin_small_more"
+        android:padding="@dimen/margin_small"
         android:scaleType="fitXY"
-        android:src="@drawable/load_error" />
+        android:clickable="true"
+        android:background="@drawable/selector_black_alpha"
+        android:src="@drawable/icon_menu" />
 
     <TextView
         android:id="@+id/topbar_title"
@@ -24,4 +25,15 @@
         android:layout_toRightOf="@+id/topbar_icon"
         android:text="@string/app_name" />
 
+    <ImageView
+        android:id="@+id/topbar_menu"
+        android:layout_width="@dimen/height_topbar"
+        android:layout_height="@dimen/height_topbar"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/margin_small"
+        android:scaleType="fitXY"
+        android:clickable="true"
+        android:background="@drawable/selector_black_alpha"
+        android:src="@drawable/icon_menu" />
 </RelativeLayout>
