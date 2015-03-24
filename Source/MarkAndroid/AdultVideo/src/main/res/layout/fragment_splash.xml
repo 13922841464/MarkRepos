@@ -4,4 +4,20 @@
     android:layout_height="match_parent"
     android:background="@drawable/splash_bg">
 
+    <View
+        android:id="@+id/center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent" />
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/center_vertical"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:src="@drawable/splash_logo" />
+
 </RelativeLayout>
