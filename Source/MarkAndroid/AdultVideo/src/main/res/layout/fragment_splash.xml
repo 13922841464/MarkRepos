@@ -20,4 +20,29 @@
         android:layout_marginBottom="@dimen/margin_normal"
         android:src="@drawable/splash_logo" />
 
+    <TextView
+        android:id="@+id/splash_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/center_vertical"
+        style="@style/font_splash_black"
+        android:text="@string/splash_text"
+        android:padding="20dp"
+        android:gravity="center_horizontal|top" />
+
+    <Button
+        android:id="@+id/enter_button"
+        style="@style/font_title"
+        android:paddingLeft="@dimen/margin_large_more"
+        android:paddingRight="@dimen/margin_large_more"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small"
+        android:background="@drawable/selector_default_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_enter"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
 </RelativeLayout>

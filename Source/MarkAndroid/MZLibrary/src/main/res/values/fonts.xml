@@ -4,12 +4,20 @@
     <style name="font_splash_black">
         <item name="android:textColor">@color/color_bg_drawer</item>
         <item name="android:textSize">22sp</item>
+        <item name="android:shadowColor">@color/color_font_spec</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">5</item>
     </style>
 
     <!-- 白色splash文字 -->
     <style name="font_splash_white">
         <item name="android:textColor">@color/color_font_text</item>
         <item name="android:textSize">22sp</item>
+        <item name="android:shadowColor">@color/color_font_spec</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">5</item>
     </style>
 
     <!-- 应用于标题区域 -->

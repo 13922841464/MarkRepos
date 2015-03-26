@@ -4,8 +4,7 @@
     android:layout_height="match_parent">
 
     <com.markzhai.library.widget.MZTopbar
-        android:id="@+id/topbar"
+        android:id="@id/topbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_topbar" />
-
 </RelativeLayout>
