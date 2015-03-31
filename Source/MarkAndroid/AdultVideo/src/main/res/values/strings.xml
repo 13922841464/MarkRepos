@@ -7,4 +7,7 @@
 
     <!-- Home Fragment -->
     <string name="download">Download</string>
+
+    <!-- Video Fragment -->
+    <string name="buffering">Buffering\nWonderful continue later</string>
 </resources>

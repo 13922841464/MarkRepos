@@ -28,6 +28,19 @@ public class EmpflixVideoModel extends MZModel {
         return videoTitle + "\n" + videoURL + "\n" + videoDuration + "\n" + videoThumb;
     }
 
+    public int getDurationMilliSecond() {
+        int duration = 100;
+
+        String[] durationArry = videoDuration.split(":");
+        if (durationArry != null && durationArry.length == 2) {
+            Integer min = Integer.parseInt(durationArry[0]);
+            Integer sec = Integer.parseInt(durationArry[1]);
+            return (min * 60 + sec) * 1000;
+        }
+
+        return duration;
+    }
+
     public static List<EmpflixVideoModel> parseList(String httpResponse) {
         List<EmpflixVideoModel> result = new ArrayList<EmpflixVideoModel>();
         Document document = Jsoup.parse(httpResponse);

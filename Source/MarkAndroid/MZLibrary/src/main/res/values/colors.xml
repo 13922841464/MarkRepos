@@ -11,7 +11,6 @@
     <color name="color_bg_button">@color/color_bg_topbar</color>
     <color name="color_bg_button_press">#2B2B2B</color>
     <color name="color_bg_button_disable">@color/color_font_title</color>
-    <color name="color_bg_black_transparent">#000000aa</color>
 
     <!-- 文字颜色 -->
     <color name="color_font_base">#FBF9F7</color>

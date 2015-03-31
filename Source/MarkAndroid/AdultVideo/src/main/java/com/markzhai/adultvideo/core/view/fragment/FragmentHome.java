@@ -2,6 +2,7 @@ package com.markzhai.adultvideo.core.view.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,10 @@ import com.markzhai.adultvideo.R;
 import com.markzhai.adultvideo.core.controller.EmpflixController;
 import com.markzhai.adultvideo.core.model.empflix.EmpflixDB;
 import com.markzhai.adultvideo.core.model.empflix.EmpflixVideoModel;
+import com.markzhai.adultvideo.core.view.VideoActivity;
 import com.markzhai.library.framework.BaseFragment;
+import com.markzhai.library.framework.page.FragmentRequest;
+import com.markzhai.library.framework.page.FragmentType;
 import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.widget.MZTopbar;
 
@@ -109,7 +113,7 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
 
         public HomeVideoListAdapter() {
             List<EmpflixVideoModel> dbList = EmpflixDB.getAll(getBaseActivity());
-            if(dbList != null) {
+            if (dbList != null) {
                 videoList = dbList;
             }
         }
@@ -166,17 +170,19 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
             holder.downloadButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showToast("download start.\n" + item.videoURL);
+                    String mimutypeMap = MimeTypeMap.getFileExtensionFromUrl(item.videoURL);
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(mimutypeMap);
+                    intent.setDataAndType(Uri.parse(item.videoURL), mimeType);
+                    startActivity(intent);
                 }
             });
             holder.playButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String extension = MimeTypeMap.getFileExtensionFromUrl(item.videoURL);
-                    String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
-                    Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
-                    mediaIntent.setDataAndType(Uri.parse(item.videoURL), mimeType);
-                    startActivity(mediaIntent);
+                    Intent videoIntent = new Intent(getBaseActivity(), VideoActivity.class);
+                    videoIntent.putExtra(FragmentVideo.VIDEO_INFO, item);
+                    startActivity(videoIntent);
                 }
             });
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_bg_black_alpha">
+
+        <TextView
+            android:id="@+id/played_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            style="@style/font_body_hint"
+            android:layout_marginLeft="@dimen/margin_small_more"
+            android:layout_marginRight="@dimen/margin_small_more"
+            android:text="0:00" />
+
+        <SeekBar
+            android:id="@+id/video_duration_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/total_duration"
+            android:layout_toRightOf="@+id/played_duration"
+            style="@style/Default_Seekbar" />
+
+        <TextView
+            android:id="@+id/total_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_small_more"
+            android:layout_marginRight="@dimen/margin_small_more"
+            style="@style/font_body_hint"
+            android:text="0:00" />
+    </RelativeLayout>
+
+</RelativeLayout>

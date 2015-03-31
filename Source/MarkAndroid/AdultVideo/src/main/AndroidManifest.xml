@@ -16,13 +16,22 @@
         android:theme="@android:style/Theme.NoTitleBar">
         <activity
             android:name=".core.view.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".core.view.VideoActivity"
+            android:screenOrientation="landscape" />
 
         <provider
             android:name=".core.model.empflix.EmpflixContentProvider"

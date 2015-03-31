@@ -18,7 +18,6 @@ import com.markzhai.library.utils.UIUtils;
 import com.markzhai.library.widget.MZTopbar;
 
 import roboguice.fragment.RoboFragment;
-import roboguice.inject.InjectView;
 
 /**
  * Created by marktlzhai on 2015/1/24.

@@ -9,7 +9,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected FragmentRequest installHome() {
-        FragmentRequest request = new FragmentRequest(FragmentType.HOME, FragmentSplash.class, false, true, null);
+        FragmentRequest request = new FragmentRequest(FragmentType.HOME, FragmentSplash.class, false, true, getIntent().getExtras());
         return request;
     }
 }
