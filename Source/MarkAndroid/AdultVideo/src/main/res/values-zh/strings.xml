@@ -4,4 +4,7 @@
     <!-- Splash Fragment -->
     <string name="splash_text">该程序包含成人内容，确认满18周岁方可进入。</string>
     <string name="splash_enter">进入</string>
+
+    <!-- Home Fragment -->
+    <string name="download">下载</string>
 </resources>

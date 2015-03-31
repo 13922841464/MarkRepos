@@ -1,5 +1,6 @@
 package com.markzhai.library.framework;
 
+import android.app.Dialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.markzhai.library.R;
+import com.markzhai.library.framework.dialog.LoadingDialog;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.utils.UIUtils;
 import com.markzhai.library.widget.MZTopbar;
@@ -40,16 +42,20 @@ public abstract class BaseFragment extends RoboFragment {
 
     private BaseActivity baseActivity;
 
-    private View rootView;
+    protected View rootView;
 
     protected static final Handler handler = new Handler();
 
     private MZTopbar topbar;
 
+    private Dialog loadingDialog;
+
     /**
      * Async-http-client
      */
     protected AsyncHttpClient httpClient;
+
+    protected static final Handler inHandler = new Handler();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -72,7 +78,7 @@ public abstract class BaseFragment extends RoboFragment {
         httpClient = new AsyncHttpClient();
 
         topbar = (MZTopbar) rootView.findViewById(R.id.topbar);
-        if(topbar != null) {
+        if (topbar != null) {
             initTopbar(topbar);
         }
     }
@@ -97,6 +103,10 @@ public abstract class BaseFragment extends RoboFragment {
                 UIUtils.setTypeFace((TextView) rootView, typeface != null ? typeface : defaultTypeface);
             }
         }
+    }
+
+    protected View findViewById(int viewID) {
+        return rootView.findViewById(viewID);
     }
 
     public BaseActivity getBaseActivity() {
@@ -144,6 +154,16 @@ public abstract class BaseFragment extends RoboFragment {
             return ((BaseFragment) o).getFragmentTag().equals(getFragmentTag());
         } else {
             return false;
+        }
+    }
+
+    public void showLoadingDialog(String message, boolean cancelable) {
+        loadingDialog = LoadingDialog.showLoadingDialog(getBaseActivity(), message, cancelable);
+    }
+
+    public void hideLoadingDialog() {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
         }
     }
 

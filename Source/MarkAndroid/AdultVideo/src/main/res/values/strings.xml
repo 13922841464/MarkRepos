@@ -4,4 +4,7 @@
     <!-- Splash Fragment -->
     <string name="splash_text">The program contains adult contents, no entry for confirming full 18 one full year of life before entering.</string>
     <string name="splash_enter">Enter</string>
+
+    <!-- Home Fragment -->
+    <string name="download">Download</string>
 </resources>

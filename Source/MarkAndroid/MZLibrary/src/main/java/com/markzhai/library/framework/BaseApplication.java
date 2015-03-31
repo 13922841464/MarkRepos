@@ -3,7 +3,6 @@ package com.markzhai.library.framework;
 import android.app.Application;
 import android.util.DisplayMetrics;
 
-import com.activeandroid.ActiveAndroid;
 import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.utils.NLog;
 import com.markzhai.library.utils.SPUtils;
@@ -61,29 +60,6 @@ public class BaseApplication extends Application {
         NLog.d("============== Signture Information===============");
         NLog.d(SigntureUtil.getSignture(instance));
         NLog.d("============== Signture Information===============");
-    }
-
-    /**
-     * 使用ActiveAndroid实现数据库ORM映射
-     * 初始化数据库,务必在manifest文件中定义
-     *
-     * <application>
-     *      <meta-data android:name="AA_DB_NAME" android:value="XXX.db"/>
-     *      <meta-data android:name="AA_DB_VERSION" android:value="1"/>
-     * </application>
-     *
-     * Model类继承MZModel, 使用@Table(name = "tablename")和@Column(name = "columnname")来是实现表和字段的定义
-     * Model类中所有字段为public,并在manifest文件中定义
-     * <application>
-     *      <meta-data android:name="AA_MODELS" android:value="com.package.XXModel"/>
-     * </application>
-     * 如果有外键关联，使用getMany()方法实现;
-     *
-     * 如果使用index，使用@Column(name = "columnname", index = true)
-     */
-    protected void initORM() {
-        ActiveAndroid.initialize(this);
-        ormSupport = true;
     }
 
     @Override

@@ -1,8 +1,0 @@
-<resources>
-    <string name="ok">OK</string>
-    <string name="cancel">Cancel</string>
-
-    <string name="exit_press_again">Press again to exit the program</string>
-
-    <string name="loading">Loading ...</string>
-</resources>

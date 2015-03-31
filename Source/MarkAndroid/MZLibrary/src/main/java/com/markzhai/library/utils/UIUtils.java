@@ -16,6 +16,28 @@ import android.widget.TextView;
  */
 public class UIUtils {
 
+    public static final float getHeightInPx(Context context) {
+        final float height = context.getResources().getDisplayMetrics().heightPixels;
+        return height;
+    }
+
+    public static final float getWidthInPx(Context context) {
+        final float width = context.getResources().getDisplayMetrics().widthPixels;
+        return width;
+    }
+
+    public static final int getHeightInDp(Context context) {
+        final float height = context.getResources().getDisplayMetrics().heightPixels;
+        int heightInDp = px2dp(context, height);
+        return heightInDp;
+    }
+
+    public static final int getWidthInDp(Context context) {
+        final float height = context.getResources().getDisplayMetrics().heightPixels;
+        int widthInDp = px2dp(context, height);
+        return widthInDp;
+    }
+
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */

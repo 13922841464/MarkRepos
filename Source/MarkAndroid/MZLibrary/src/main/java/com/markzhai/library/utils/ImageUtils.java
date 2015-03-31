@@ -36,7 +36,7 @@ public class ImageUtils {
         ImageUtils.context = context;
 
         if (displayImageOptions == null) {
-            displayImageOptions = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.loading).showImageForEmptyUri(R.drawable.load_error).showImageOnFail(R.drawable.load_error).cacheInMemory(true).cacheOnDisk(true)
+            displayImageOptions = new DisplayImageOptions.Builder().showImageForEmptyUri(R.drawable.load_error).showImageOnFail(R.drawable.load_error).cacheInMemory(true).cacheOnDisk(true)
                     .considerExifParams(true).displayer(new FadeInBitmapDisplayer(20)).build();
         }
 

@@ -1,2 +1,3 @@
 <resources>
+    <dimen name="home_video_height">175dp</dimen>
 </resources>
