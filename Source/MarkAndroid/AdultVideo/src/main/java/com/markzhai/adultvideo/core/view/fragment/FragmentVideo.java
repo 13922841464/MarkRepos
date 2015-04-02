@@ -73,7 +73,6 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
                 int progress = seekBar.getProgress();
                 if (mediaPlayer != null && mediaPlayer.isPlaying()) {
                     mediaPlayer.seekTo(progress);
-                    showLoadingDialog(getString(R.string.buffering), false);
                 }
             }
         });
@@ -124,8 +123,10 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
                     updateSeekTimer.schedule(new TimerTask() {
                         @Override
                         public void run() {
-                            NLog.e("played :(" + mediaPlayer.getCurrentPosition() + "/" + videoData.getDurationMilliSecond() + ")");
-                            videoSeek.setProgress(mediaPlayer.getCurrentPosition());
+                            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+                                NLog.e("played :(" + mediaPlayer.getCurrentPosition() + "/" + videoData.getDurationMilliSecond() + ")");
+                                videoSeek.setProgress(mediaPlayer.getCurrentPosition());
+                            }
                         }
                     }, 1000, 1000);
                 }
@@ -149,7 +150,7 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
     }
 
     private void stop() {
-        if(mediaPlayer != null) {
+        if (mediaPlayer != null) {
             mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = null;

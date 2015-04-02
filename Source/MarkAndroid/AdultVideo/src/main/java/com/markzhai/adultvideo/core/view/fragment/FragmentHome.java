@@ -17,9 +17,11 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.markzhai.adultvideo.R;
 import com.markzhai.adultvideo.core.controller.EmpflixController;
+import com.markzhai.adultvideo.core.model.empflix.EmpflixCategory;
 import com.markzhai.adultvideo.core.model.empflix.EmpflixDB;
 import com.markzhai.adultvideo.core.model.empflix.EmpflixVideoModel;
 import com.markzhai.adultvideo.core.view.VideoActivity;
+import com.markzhai.adultvideo.core.view.dialog.PickCategoryDialog;
 import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.framework.page.FragmentType;
@@ -34,7 +36,7 @@ import roboguice.inject.InjectView;
 /**
  * Created by marktlzhai on 2015/3/26.
  */
-public class FragmentHome extends BaseFragment implements EmpflixController.LoadPageDataCallback {
+public class FragmentHome extends BaseFragment implements EmpflixController.LoadPageDataCallback, EmpflixController.LoadCategoryCallback, PickCategoryDialog.CategorySelectedCallback {
 
     @InjectView(R.id.home_video_list)
     private PullToRefreshListView homeVideoListView;
@@ -51,6 +53,8 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
     public void initTopbar(MZTopbar topbar) {
         super.initTopbar(topbar);
 
+        topbar.setTitle(R.string.top);
+
         topbar.setIcon(R.drawable.ic_launcher, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +65,9 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
         topbar.setMenu(R.drawable.filter, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                PickCategoryDialog dialog = new PickCategoryDialog(getBaseActivity());
+                dialog.setCategoryCallback(FragmentHome.this);
+                dialog.show();
             }
         });
     }
@@ -103,6 +109,31 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
 
     @Override
     public void onLoadPageDataFailure(Throwable throwable) {
+        hideLoadingDialog();
+        showToast("Load Failure!!!\n" + throwable.getMessage());
+    }
+
+    @Override
+    public void onSelected(EmpflixCategory category) {
+        topbar.setTitle(category.getNameRes());
+        showLoadingDialog(getString(R.string.loading), false);
+        EmpflixController.loadCategory(category, FragmentHome.this);
+    }
+
+    @Override
+    public void onLoadCategorySuccess(boolean homePage, List<EmpflixVideoModel> result) {
+        hideLoadingDialog();
+        homeVideoListView.onRefreshComplete();
+
+        if (homePage) {
+            homeVideoListAdapter.update(result);
+        } else {
+            homeVideoListAdapter.addPage(result);
+        }
+    }
+
+    @Override
+    public void onLoadCategoryFailure(Throwable throwable) {
         hideLoadingDialog();
         showToast("Load Failure!!!\n" + throwable.getMessage());
     }
@@ -164,6 +195,7 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
                 holder = (ViewHolder) convertView.getTag();
             }
 
+            holder.videoImageView.setImageResource(R.drawable.loading_empty);
             ImageUtils.displayImage(item.videoThumb, holder.videoImageView);
             holder.videoNameView.setText(item.videoTitle);
             holder.videoDurationView.setText(item.videoDuration);

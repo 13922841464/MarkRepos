@@ -45,7 +45,7 @@ public abstract class BaseFragment extends RoboFragment {
 
     protected static final Handler handler = new Handler();
 
-    private MZTopbar topbar;
+    protected MZTopbar topbar;
 
     private Dialog loadingDialog;
 
