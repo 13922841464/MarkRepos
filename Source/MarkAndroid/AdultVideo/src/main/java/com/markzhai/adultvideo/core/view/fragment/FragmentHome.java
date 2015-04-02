@@ -1,6 +1,7 @@
 package com.markzhai.adultvideo.core.view.fragment;
 
 import android.content.Intent;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +14,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.markzhai.adultvideo.R;
@@ -26,6 +32,7 @@ import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.framework.page.FragmentType;
 import com.markzhai.library.utils.ImageUtils;
+import com.markzhai.library.utils.LocationUtils;
 import com.markzhai.library.widget.MZTopbar;
 
 import java.util.ArrayList;
@@ -43,6 +50,11 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
     private HomeVideoListAdapter homeVideoListAdapter;
 
     private int currentPage = 1;
+
+    @InjectView(R.id.adView)
+    private AdView adview;
+    private InterstitialAd interstitialAD;
+    private AdRequest adRequest;
 
     @Override
     public int getLayoutResId() {
@@ -74,6 +86,8 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
 
     @Override
     public void init() {
+        initAD();
+
         homeVideoListAdapter = new HomeVideoListAdapter();
         homeVideoListView.setAdapter(homeVideoListAdapter);
         homeVideoListView.setMode(PullToRefreshBase.Mode.BOTH);
@@ -93,6 +107,32 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
 
         showLoadingDialog(getString(R.string.loading), false);
         EmpflixController.loadPageData(FragmentHome.this);
+    }
+
+    private void initAD() {
+        adRequest = new AdRequest.Builder().setLocation(LocationUtils.getLocation(getBaseActivity())).build();
+
+        interstitialAD = new InterstitialAd(getBaseActivity());
+        interstitialAD.setAdUnitId(getString(R.string.ad_page));
+        loadAD();
+    }
+
+    private void loadAD() {
+        adview.loadAd(adRequest);
+        interstitialAD.loadAd(adRequest);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        adview.resume();
+        initAD();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        adview.pause();
     }
 
     @Override
@@ -136,6 +176,12 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
     public void onLoadCategoryFailure(Throwable throwable) {
         hideLoadingDialog();
         showToast("Load Failure!!!\n" + throwable.getMessage());
+    }
+
+    private void openVideoPlayer(EmpflixVideoModel item) {
+        Intent videoIntent = new Intent(getBaseActivity(), VideoActivity.class);
+        videoIntent.putExtra(FragmentVideo.VIDEO_INFO, item);
+        startActivity(videoIntent);
     }
 
     class HomeVideoListAdapter extends BaseAdapter {
@@ -212,9 +258,18 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
             holder.playButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent videoIntent = new Intent(getBaseActivity(), VideoActivity.class);
-                    videoIntent.putExtra(FragmentVideo.VIDEO_INFO, item);
-                    startActivity(videoIntent);
+                    if(interstitialAD.isLoaded()) {
+                        interstitialAD.setAdListener(new AdListener() {
+                            @Override
+                            public void onAdClosed() {
+                                loadAD();
+                                openVideoPlayer(item);
+                            }
+                        });
+                        interstitialAD.show();
+                    } else {
+                        openVideoPlayer(item);
+                    }
                 }
             });
 

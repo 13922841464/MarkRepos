@@ -55,6 +55,7 @@ public abstract class BaseActivity extends RoboFragmentActivity {
     private void init() {
         httpClient = new AsyncHttpClient();
         defaultFragmentManager = new DefaultFragmentManager(this);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
         startFragment(R.id.fragment_container, installHome());
     }

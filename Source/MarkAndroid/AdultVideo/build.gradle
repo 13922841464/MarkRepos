@@ -12,16 +12,6 @@ android {
         versionName "1.0"
     }
 
-    signingConfigs {
-        debug {
-            storeFile file("ESecure_androiddebugkey.keystore")
-        }
-
-        release {
-            storeFile file("ESecure.keystore")
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -35,4 +25,6 @@ dependencies {
     compile project(':MZLibrary')
     compile 'org.jsoup:jsoup:1.8.1'
     compile project(':PullToRefresh')
+
+    compile 'com.google.android.gms:play-services:7.0.0'
 }
