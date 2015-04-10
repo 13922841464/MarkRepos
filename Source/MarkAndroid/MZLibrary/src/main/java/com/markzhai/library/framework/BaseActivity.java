@@ -11,6 +11,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.markzhai.library.R;
 import com.markzhai.library.framework.page.DefaultFragmentManager;
 import com.markzhai.library.framework.page.FragmentRequest;
+import com.umeng.analytics.MobclickAgent;
 
 import roboguice.activity.RoboFragmentActivity;
 
@@ -58,6 +59,18 @@ public abstract class BaseActivity extends RoboFragmentActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
         startFragment(R.id.fragment_container, installHome());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     /**

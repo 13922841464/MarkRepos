@@ -33,6 +33,7 @@ import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.framework.page.FragmentType;
 import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.utils.LocationUtils;
+import com.markzhai.library.utils.UMengUtils;
 import com.markzhai.library.widget.MZTopbar;
 
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ import roboguice.inject.InjectView;
 /**
  * Created by marktlzhai on 2015/3/26.
  */
-public class FragmentHome extends BaseFragment implements EmpflixController.LoadPageDataCallback, EmpflixController.LoadCategoryCallback, PickCategoryDialog.CategorySelectedCallback {
+public class FragmentHome extends BaseFragment implements EmpflixController.LoadPageDataCallback, EmpflixController.LoadCategoryCallback, PickCategoryDialog.CategorySelectedCallback, MZTopbar.DragListClickCallback {
 
     @InjectView(R.id.home_video_list)
     private PullToRefreshListView homeVideoListView;
@@ -53,7 +54,6 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
 
     @InjectView(R.id.adView)
     private AdView adview;
-    private InterstitialAd interstitialAD;
     private AdRequest adRequest;
 
     @Override
@@ -74,14 +74,30 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
             }
         });
 
-        topbar.setMenu(R.drawable.filter, new View.OnClickListener() {
+        List<MZTopbar.DragListTitle> menuItems = new ArrayList<MZTopbar.DragListTitle>();
+        menuItems.add(new MZTopbar.DragListTitle() {
             @Override
-            public void onClick(View v) {
-                PickCategoryDialog dialog = new PickCategoryDialog(getBaseActivity());
-                dialog.setCategoryCallback(FragmentHome.this);
-                dialog.show();
+            public String getTitle() {
+                return getString(R.string.category);
+            }
+
+            @Override
+            public int getIcon() {
+                return R.drawable.filter;
             }
         });
+//        menuItems.add(new MZTopbar.DragListTitle() {
+//            @Override
+//            public String getTitle() {
+//                return getString(R.string.feedback);
+//            }
+//
+//            @Override
+//            public int getIcon() {
+//                return R.drawable.feedback;
+//            }
+//        });
+        topbar.setMenuList(R.drawable.more, menuItems, this);
     }
 
     @Override
@@ -110,16 +126,13 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
     }
 
     private void initAD() {
-        adRequest = new AdRequest.Builder().setLocation(LocationUtils.getLocation(getBaseActivity())).build();
+        adRequest = new AdRequest.Builder().build();
 
-        interstitialAD = new InterstitialAd(getBaseActivity());
-        interstitialAD.setAdUnitId(getString(R.string.ad_page));
         loadAD();
     }
 
     private void loadAD() {
         adview.loadAd(adRequest);
-        interstitialAD.loadAd(adRequest);
     }
 
     @Override
@@ -182,6 +195,20 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
         Intent videoIntent = new Intent(getBaseActivity(), VideoActivity.class);
         videoIntent.putExtra(FragmentVideo.VIDEO_INFO, item);
         startActivity(videoIntent);
+    }
+
+    @Override
+    public void itemClicked(int position, Object item) {
+        switch (position) {
+            case 0:
+                PickCategoryDialog dialog = new PickCategoryDialog(getBaseActivity());
+                dialog.setCategoryCallback(FragmentHome.this);
+                dialog.show();
+                break;
+            case 1:
+                UMengUtils.feedback(getBaseActivity());
+                break;
+        }
     }
 
     class HomeVideoListAdapter extends BaseAdapter {
@@ -258,18 +285,7 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
             holder.playButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(interstitialAD.isLoaded()) {
-                        interstitialAD.setAdListener(new AdListener() {
-                            @Override
-                            public void onAdClosed() {
-                                loadAD();
-                                openVideoPlayer(item);
-                            }
-                        });
-                        interstitialAD.show();
-                    } else {
-                        openVideoPlayer(item);
-                    }
+                    openVideoPlayer(item);
                 }
             });
 

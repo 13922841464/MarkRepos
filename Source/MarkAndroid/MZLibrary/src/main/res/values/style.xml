@@ -16,4 +16,9 @@
         <item name="android:thumbOffset">8dip</item>
         <item name="android:progressDrawable">@drawable/layer_seekbar</item>
     </style>
+
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
 </resources>

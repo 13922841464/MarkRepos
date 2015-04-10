@@ -12,11 +12,13 @@
     <!-- Home Fragment -->
     <string name="download">Download</string>
     <string name="top">TOP</string>
+    <string name="feedback">Feedback</string>
 
     <!-- Video Fragment -->
     <string name="buffering">Buffering\nWonderful continue later</string>
 
     <!-- Category -->
+    <string name="category">Categorys</string>
     <string name="c_Amateur">Amateur</string>
     <string name="c_Anal">Anal</string>
     <string name="c_Arab">Arab Sex</string>

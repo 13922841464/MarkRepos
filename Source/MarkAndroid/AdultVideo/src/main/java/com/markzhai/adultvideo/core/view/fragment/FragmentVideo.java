@@ -9,10 +9,12 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.markzhai.adultvideo.R;
+import com.markzhai.adultvideo.core.App;
 import com.markzhai.adultvideo.core.model.empflix.EmpflixVideoModel;
 import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.utils.NLog;
 import com.markzhai.library.utils.TimeUtils;
+import com.markzhai.library.utils.UMengUtils;
 
 import java.io.IOException;
 import java.util.Timer;
@@ -43,6 +45,10 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
     private TextView playedDuration;
     @InjectView(R.id.total_duration)
     private TextView totalDuration;
+
+    private long startLoadTime;
+
+    private boolean isBufferedSuccess = false;
 
     @Override
     public int getLayoutResId() {
@@ -101,6 +107,8 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
 
     private void play() {
         try {
+            startLoadTime = System.currentTimeMillis();
+
             mediaPlayer = new MediaPlayer();
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             mediaPlayer.setDataSource(getBaseActivity(), Uri.parse(videoData.videoURL));
@@ -117,6 +125,11 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
+                    int loadCostTime = new Long(System.currentTimeMillis() - startLoadTime).intValue();
+                    UMengUtils.onEventValue(App.EVENT_BUFF_COST_TIME, loadCostTime);
+
+                    isBufferedSuccess = true;
+
                     NLog.e("media prepared.");
                     hideLoadingDialog();
                     mediaPlayer.start();
@@ -160,6 +173,11 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
     @Override
     public void onDestroy() {
         super.onDestroy();
+
+        if (!isBufferedSuccess) {
+            UMengUtils.onEvent(App.EVENT_PLAY_TOO_SLOW, String.valueOf(System.currentTimeMillis() - startLoadTime));
+        }
+        isBufferedSuccess = false;
 
         if (updateSeekTimer != null) {
             updateSeekTimer.cancel();

@@ -16,6 +16,7 @@ import com.markzhai.library.framework.dialog.LoadingDialog;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.utils.UIUtils;
 import com.markzhai.library.widget.MZTopbar;
+import com.umeng.analytics.MobclickAgent;
 
 import roboguice.fragment.RoboFragment;
 
@@ -92,6 +93,9 @@ public abstract class BaseFragment extends RoboFragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        MobclickAgent.onPageStart(getFragmentTag());
+
         //设置默认字体
         Typeface defaultTypeface = getBaseActivity().installFont();
         Typeface typeface = installFont();
@@ -102,6 +106,12 @@ public abstract class BaseFragment extends RoboFragment {
                 UIUtils.setTypeFace((TextView) rootView, typeface != null ? typeface : defaultTypeface);
             }
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd(getFragmentTag());
     }
 
     protected View findViewById(int viewID) {

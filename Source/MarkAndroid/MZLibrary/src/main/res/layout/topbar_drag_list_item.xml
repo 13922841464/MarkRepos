@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_topbar"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/clicked_layout"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:background="@drawable/selector_topbar_drag_item">
+
+        <ImageView
+            android:id="@+id/drag_item_icon"
+            android:layout_width="@dimen/height_topbar"
+            android:layout_height="@dimen/height_topbar"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/dialog_close" />
+
+        <TextView
+            android:id="@+id/drag_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_topbar"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:gravity="left|center_vertical"
+            android:text="点击"
+            style="@style/font_body" />
+    </LinearLayout>
+
+</RelativeLayout>

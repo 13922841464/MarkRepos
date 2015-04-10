@@ -7,11 +7,18 @@ import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.utils.NLog;
 import com.markzhai.library.utils.SPUtils;
 import com.markzhai.library.utils.SigntureUtil;
+import com.markzhai.library.utils.UMengUtils;
+import com.umeng.analytics.AnalyticsConfig;
 
 /**
  * Created by marktlzhai on 2015/1/24.
  */
-public class BaseApplication extends Application {
+public abstract class BaseApplication extends Application {
+
+    public abstract String getUMengAppKey();
+
+    public abstract String getUMengChannel();
+
     /**
      * 屏幕宽度（像素）
      */
@@ -56,6 +63,9 @@ public class BaseApplication extends Application {
 
         // 初始化SP
         SPUtils.init(this);
+
+        // 初始化友盟组件
+        UMengUtils.init(this, getUMengAppKey(), getUMengChannel());
 
         NLog.d("============== Signture Information===============");
         NLog.d(SigntureUtil.getSignture(instance));
