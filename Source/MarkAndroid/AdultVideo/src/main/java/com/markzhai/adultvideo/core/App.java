@@ -15,6 +15,7 @@ public class App extends BaseApplication {
     public static final String EVENT_CLICK_NORMAL_AD = "CLICK_NORMAL_AD";
     public static final String EVENT_CLICK_PAGE_AD = "CLICK_PAGE_AD";
     public static final String EVENT_PLAY_TOO_SLOW = "PLAY_TOO_SLOW";
+    public static final String EVENT_USER_DOWNLOA = "USER_DOWNLOA";
 
     @Override
     public String getUMengAppKey() {
