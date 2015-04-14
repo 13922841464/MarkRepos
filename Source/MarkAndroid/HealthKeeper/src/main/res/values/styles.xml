@@ -1,3 +1,21 @@
 <resources>
 
+    <style name="splash_text">
+        <item name="android:textColor">@color/color_bg_drawer</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:shadowColor">@color/color_font_spec</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="splash_text_hint">
+        <item name="android:textColor">@color/color_bg_drawer_item</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="splash_text_copy_right">
+        <item name="android:textColor">@color/color_bg_drawer</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>

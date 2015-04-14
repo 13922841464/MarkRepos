@@ -15,6 +15,14 @@ import com.umeng.analytics.AnalyticsConfig;
  */
 public abstract class BaseApplication extends Application {
 
+    protected static final String CHANNEL_DEVELOPER = "DEVELOPER";
+    protected static final String CHANNEL_UMENG = "UMENG";
+    protected static final String CHANNEL_MIKANDI = "MIKANDI";
+    protected static final String CHANNEL_1MOBILE = "1MOBILE";
+    protected static final String CHANNEL_GOOGLE = "GOOGLE_PLAY";
+    protected static final String CHANNEL_TENCENT = "TENCENT_STORE";
+    protected static final String CHANNEL_BAIDU = "BAIDU_STORE";
+
     public abstract String getUMengAppKey();
 
     public abstract String getUMengChannel();
@@ -65,7 +73,9 @@ public abstract class BaseApplication extends Application {
         SPUtils.init(this);
 
         // 初始化友盟组件
-        UMengUtils.init(this, getUMengAppKey(), getUMengChannel());
+        if (getUMengAppKey() != null && getUMengChannel() != null) {
+            UMengUtils.init(this, getUMengAppKey(), getUMengChannel());
+        }
 
         NLog.d("============== Signture Information===============");
         NLog.d(SigntureUtil.getSignture(instance));

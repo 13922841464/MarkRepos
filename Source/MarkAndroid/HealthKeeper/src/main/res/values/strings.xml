@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">健康管家</string>
+    <string name="app_copy_right">&#169;2014-2016 版权所有 玛卡工作室</string>
+
+    <!-- 医疗中心 -->
+    <string name="category_medical_center">医疗中心</string>
+    <string name="disease_information">疾病信息</string>
+    <string name="disease_information_hint">疾病百科提供详尽的:疾病查询,疾病分析,疾病就医,疾病治疗,疾病预防,疾病诊断,疾病概述 等相关的疾病信息</string>
+    <string name="disease_finder">病状查找</string>
+    <string name="disease_finder_hint">病状大全提供详尽的:病状查询,病状分析,病状就医,病状治疗,病状预防,病状诊断,病状概述</string>
+    <string name="check_items">检查项目</string>
+    <string name="check_items_hint">检查库为你提供详尽的:疾病检查,病种检查,检查介绍</string>
+    <string name="surgery_items">手术项目</string>
+    <string name="surgery_items_hint">详细的手术方法、手术资料、手术大全、手术详情、手术后注意事项、相关医院、相关医生等查询</string>
+
+    <!-- 医院药店 -->
+    <string name="category_medical_corp">医院药店</string>
+    <string name="hospital_information">医院大全</string>
+    <string name="hospital_information_hint">专门的医院信息。如医院联系电话，医院邮箱，医院网址、医院地址等相关医院简介信息</string>
+    <string name="store_information">药店大全</string>
+    <string name="store_information_hint">通过专门的药店信息。如药店联系电话，药店邮箱，药房网址、药房地址等相关药店简介信息</string>
+    <string name="factory_information">药企大全</string>
+    <string name="factory_information_hint">通过专门的药企业信息。如药企联系电话，药企邮箱，药企业网址、药企业地址等相关药店简介信息</string>
+
+    <!-- 健康知识 -->
+    <string name="category_health_knowledge">健康知识</string>
+    <string name="health_knowledge">健康知识</string>
+    <string name="health_knowledge_hint">打造专业的知识文化提供平台，提供免费开放的数据接口。我们将会用最全新的方式， 提供专业的文化知识</string>
+    <string name="health_ask">健康一问</string>
+    <string name="health_ask_hint">健康问答平台</string>
+    <string name="health_book">健康图书</string>
+    <string name="health_book_hint">健康读书，挖掘更好看的生活阅读</string>
+
+    <!-- 药品食品 -->
+    <string name="category_health_foods">药品食品</string>
+    <string name="health_foods">健康食谱</string>
+    <string name="health_foods_hint">最优质的健康美食，食谱，菜谱网</string>
+    <string name="health_diet">食疗大全</string>
+    <string name="health_diet_hint">专业的医药健康食疗网站，提供开放的健康食疗食品</string>
+    <string name="health_drug">药品直达</string>
+    <string name="health_drug_hint">药品信息查询平台，提供最全的药品信息</string>
+
 </resources>

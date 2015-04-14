@@ -82,6 +82,21 @@ public class AppUtils {
         return appVersion;
     }
 
+    /**
+     * 获取Version Name
+     * @return
+     */
+    public static String getVersionName() {
+        PackageManager pm = BaseApplication.getApplication().getPackageManager();
+        String appVersion = "";
+        try {
+            appVersion = pm.getPackageInfo(BaseApplication.getApplication().getPackageName(), 0).versionName;
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return appVersion;
+    }
+
     public static String getCurrentDeviceFullModel() {
 
         String deviceFullModel = "";

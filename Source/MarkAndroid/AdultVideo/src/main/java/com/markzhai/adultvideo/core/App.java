@@ -7,10 +7,6 @@ import com.markzhai.library.framework.BaseApplication;
  */
 public class App extends BaseApplication {
 
-    private static final String CHANNEL_UMENG = "UMENG";
-    private static final String CHANNEL_MIKANDI = "MIKANDI";
-    private static final String CHANNEL_1MOBILE = "1MOBILE";
-
     public static final String EVENT_BUFF_COST_TIME = "BUFF_COST_TIME";
     public static final String EVENT_CLICK_NORMAL_AD = "CLICK_NORMAL_AD";
     public static final String EVENT_CLICK_PAGE_AD = "CLICK_PAGE_AD";
