@@ -32,6 +32,12 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <!-- 应用于正文区域 -->
+    <style name="font_tab_text">
+        <item name="android:textColor">@color/color_default_text</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <!-- 应用于正文提示区域 -->
     <style name="font_body_hint">
         <item name="android:textColor">@color/color_font_title</item>

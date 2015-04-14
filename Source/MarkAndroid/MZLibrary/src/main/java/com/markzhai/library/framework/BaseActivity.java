@@ -22,6 +22,10 @@ public abstract class BaseActivity extends RoboFragmentActivity {
 
     protected abstract FragmentRequest installHome();
 
+    protected int getLayoutID() {
+        return R.layout.activity_main;
+    }
+
     private long waitTime = 2000;
     private long touchTime = 0;
 
@@ -57,7 +61,7 @@ public abstract class BaseActivity extends RoboFragmentActivity {
         httpClient = new AsyncHttpClient();
         defaultFragmentManager = new DefaultFragmentManager(this);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setContentView(R.layout.activity_main);
+        setContentView(getLayoutID());
         startFragment(R.id.fragment_container, installHome());
     }
 

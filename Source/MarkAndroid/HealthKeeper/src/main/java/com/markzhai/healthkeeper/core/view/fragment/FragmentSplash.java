@@ -4,6 +4,8 @@ import android.widget.TextView;
 
 import com.markzhai.healthkeeper.R;
 import com.markzhai.library.framework.BaseFragment;
+import com.markzhai.library.framework.page.FragmentRequest;
+import com.markzhai.library.framework.page.FragmentType;
 import com.markzhai.library.utils.AppUtils;
 
 import roboguice.inject.InjectView;
@@ -24,5 +26,8 @@ public class FragmentSplash extends BaseFragment {
     @Override
     public void init() {
         versionView.setText(AppUtils.getVersionName());
+
+        FragmentRequest homeRequest = new FragmentRequest(FragmentType.HOME, FragmentHome.class, false, false, null);
+        startFragment(homeRequest);
     }
 }
