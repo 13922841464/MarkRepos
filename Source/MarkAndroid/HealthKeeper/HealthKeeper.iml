@@ -89,7 +89,6 @@
     <orderEntry type="library" exported="" name="asm-3.1" level="project" />
     <orderEntry type="library" exported="" name="cglib-2.2.1-v20090111" level="project" />
     <orderEntry type="library" exported="" name="roboguice-2.0" level="project" />
-    <orderEntry type="library" exported="" name="analytics-5.4.2" level="project" />
     <orderEntry type="library" exported="" name="guice-3.0-no_aop" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />

@@ -29,11 +29,7 @@ import com.markzhai.adultvideo.core.model.empflix.EmpflixVideoModel;
 import com.markzhai.adultvideo.core.view.VideoActivity;
 import com.markzhai.adultvideo.core.view.dialog.PickCategoryDialog;
 import com.markzhai.library.framework.BaseFragment;
-import com.markzhai.library.framework.page.FragmentRequest;
-import com.markzhai.library.framework.page.FragmentType;
 import com.markzhai.library.utils.ImageUtils;
-import com.markzhai.library.utils.LocationUtils;
-import com.markzhai.library.utils.UMengUtils;
 import com.markzhai.library.widget.MZTopbar;
 
 import java.util.ArrayList;
@@ -206,7 +202,6 @@ public class FragmentHome extends BaseFragment implements EmpflixController.Load
                 dialog.show();
                 break;
             case 1:
-                UMengUtils.feedback(getBaseActivity());
                 break;
         }
     }

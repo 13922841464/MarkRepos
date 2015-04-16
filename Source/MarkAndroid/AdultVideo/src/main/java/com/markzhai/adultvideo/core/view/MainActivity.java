@@ -7,7 +7,6 @@ import com.markzhai.adultvideo.core.view.fragment.FragmentSplash;
 import com.markzhai.library.framework.BaseActivity;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.framework.page.FragmentType;
-import com.markzhai.library.utils.UMengUtils;
 
 public class MainActivity extends BaseActivity {
 
@@ -19,8 +18,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected FragmentRequest installHome() {
-        UMengUtils.checkUpdate();
-
         FragmentRequest request = new FragmentRequest(FragmentType.HOME, FragmentSplash.class, false, true, getIntent().getExtras());
         return request;
     }
@@ -28,8 +25,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        UMengUtils.loadOnlineConf(this);
 
         adRequest = new AdRequest.Builder().build();
 

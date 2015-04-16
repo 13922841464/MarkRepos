@@ -1,2 +1,2 @@
-include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':AdultVideo', ':HealthKeeper'
+include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':HealthKeeper'
 include ':PullToRefresh'

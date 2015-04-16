@@ -7,8 +7,6 @@ import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.utils.NLog;
 import com.markzhai.library.utils.SPUtils;
 import com.markzhai.library.utils.SigntureUtil;
-import com.markzhai.library.utils.UMengUtils;
-import com.umeng.analytics.AnalyticsConfig;
 
 /**
  * Created by marktlzhai on 2015/1/24.
@@ -22,14 +20,6 @@ public abstract class BaseApplication extends Application {
     protected static final String CHANNEL_GOOGLE = "GOOGLE_PLAY";
     protected static final String CHANNEL_TENCENT = "TENCENT_STORE";
     protected static final String CHANNEL_BAIDU = "BAIDU_STORE";
-
-    public String getUMengAppKey() {
-        return null;
-    }
-
-    public String getUMengChannel() {
-        return null;
-    }
 
     /**
      * 屏幕宽度（像素）
@@ -75,11 +65,6 @@ public abstract class BaseApplication extends Application {
 
         // 初始化SP
         SPUtils.init(this);
-
-        // 初始化友盟组件
-        if (getUMengAppKey() != null && getUMengChannel() != null) {
-            UMengUtils.init(this, getUMengAppKey(), getUMengChannel());
-        }
 
         NLog.d("============== Signture Information===============");
         NLog.d(SigntureUtil.getSignture(instance));

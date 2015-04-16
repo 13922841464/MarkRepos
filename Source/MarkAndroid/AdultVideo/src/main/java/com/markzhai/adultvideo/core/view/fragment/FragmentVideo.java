@@ -14,7 +14,6 @@ import com.markzhai.adultvideo.core.model.empflix.EmpflixVideoModel;
 import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.utils.NLog;
 import com.markzhai.library.utils.TimeUtils;
-import com.markzhai.library.utils.UMengUtils;
 
 import java.io.IOException;
 import java.util.Timer;
@@ -126,7 +125,6 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
                 @Override
                 public void onPrepared(MediaPlayer mp) {
                     int loadCostTime = new Long(System.currentTimeMillis() - startLoadTime).intValue();
-                    UMengUtils.onEventValue(App.EVENT_BUFF_COST_TIME, loadCostTime);
 
                     isBufferedSuccess = true;
 
@@ -175,7 +173,6 @@ public class FragmentVideo extends BaseFragment implements SurfaceHolder.Callbac
         super.onDestroy();
 
         if (!isBufferedSuccess) {
-            UMengUtils.onEvent(App.EVENT_PLAY_TOO_SLOW, String.valueOf(System.currentTimeMillis() - startLoadTime));
         }
         isBufferedSuccess = false;
 

@@ -2,7 +2,6 @@ package com.markzhai.library.framework;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -11,7 +10,6 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.markzhai.library.R;
 import com.markzhai.library.framework.page.DefaultFragmentManager;
 import com.markzhai.library.framework.page.FragmentRequest;
-import com.umeng.analytics.MobclickAgent;
 
 import roboguice.activity.RoboFragmentActivity;
 
@@ -68,13 +66,11 @@ public abstract class BaseActivity extends RoboFragmentActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
     }
 
     /**
