@@ -26,7 +26,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="220dp"
+        android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/color_bg_drawer">

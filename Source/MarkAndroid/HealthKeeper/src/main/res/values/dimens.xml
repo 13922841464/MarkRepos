@@ -1,2 +1,5 @@
 <resources>
+    <!-- Drawer -->
+    <dimen name="drawer_width">220dp</dimen>
+    <dimen name="drawer_icon_size">60dp</dimen>
 </resources>

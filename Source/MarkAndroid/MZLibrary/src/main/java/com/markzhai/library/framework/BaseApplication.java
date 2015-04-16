@@ -23,9 +23,13 @@ public abstract class BaseApplication extends Application {
     protected static final String CHANNEL_TENCENT = "TENCENT_STORE";
     protected static final String CHANNEL_BAIDU = "BAIDU_STORE";
 
-    public abstract String getUMengAppKey();
+    public String getUMengAppKey() {
+        return null;
+    }
 
-    public abstract String getUMengChannel();
+    public String getUMengChannel() {
+        return null;
+    }
 
     /**
      * 屏幕宽度（像素）
