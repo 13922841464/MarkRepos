@@ -13,6 +13,9 @@ import com.markzhai.library.utils.SigntureUtil;
  */
 public abstract class BaseApplication extends Application {
 
+    public static final String GDT_TEST_APPID = "1101152570";
+    public static final String GDT_TEST_BANNER_POSID = "9079537218417626401";
+
     protected static final String CHANNEL_DEVELOPER = "DEVELOPER";
     protected static final String CHANNEL_UMENG = "UMENG";
     protected static final String CHANNEL_MIKANDI = "MIKANDI";

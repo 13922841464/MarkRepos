@@ -3,10 +3,16 @@ package com.markzhai.healthkeeper.core.view.fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import com.markzhai.gdt.GDT;
 import com.markzhai.healthkeeper.R;
+import com.markzhai.healthkeeper.core.App;
+import com.markzhai.library.utils.NLog;
 import com.markzhai.library.widget.MZTopbar;
 import com.markzhai.talkingdata.TalkingDataFragment;
+import com.qq.e.ads.AdListener;
 
 import roboguice.inject.InjectView;
 
@@ -18,6 +24,9 @@ public class FragmentHome extends TalkingDataFragment {
     @InjectView(R.id.home_drawer)
     private DrawerLayout drawer;
 
+    @InjectView(R.id.main_page_list)
+    private ListView mainPageList;
+
     @Override
     public int getLayoutResId() {
         return R.layout.fragment_home;
@@ -25,7 +34,32 @@ public class FragmentHome extends TalkingDataFragment {
 
     @Override
     public void init() {
+        GDT.showBannerAD(getBaseActivity(), topbar, App.GDT_APPID, App.GDT_POSID_BANNER, new AdListener() {
+            @Override
+            public void onNoAd() {
+                NLog.d(getFragmentTag(), "onNoAd");
+            }
 
+            @Override
+            public void onAdReceiv() {
+                NLog.d(getFragmentTag(), "onAdReceiv");
+            }
+
+            @Override
+            public void onAdExposure() {
+                NLog.d(getFragmentTag(), "onAdExposure");
+            }
+
+            @Override
+            public void onBannerClosed() {
+                NLog.d(getFragmentTag(), "onBannerClosed");
+            }
+
+            @Override
+            public void onAdClicked() {
+                NLog.d(getFragmentTag(), "onAdClicked");
+            }
+        });
     }
 
     @Override

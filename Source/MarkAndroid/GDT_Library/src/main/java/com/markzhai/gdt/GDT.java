@@ -41,7 +41,9 @@ public class GDT {
         }
         adContainer.removeAllViews();
         adContainer.addView(bannerAD);
-        bannerAD.fetchAd(new AdRequest());
+        AdRequest request = new AdRequest();
+        request.setTestAd(BuildConfig.DEBUG);
+        bannerAD.fetchAd(request);
     }
 
     /**
@@ -53,7 +55,9 @@ public class GDT {
             bannerAD.setAdListener(listener);
         }
         list.addHeaderView(bannerAD);
-        bannerAD.fetchAd(new AdRequest());
+        AdRequest request = new AdRequest();
+        request.setTestAd(BuildConfig.DEBUG);
+        bannerAD.fetchAd(request);
     }
 
     /**

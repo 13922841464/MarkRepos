@@ -15,10 +15,14 @@
         <!-- 广点通 Begin -->
         <service
             android:name="com.qq.e.comm.DownloadService"
-            android:exported="false"></service>
+            android:exported="false" >
+        </service>
+
         <activity
             android:name="com.qq.e.ads.AdActivity"
-            android:theme="@android:style/Theme.Translucent"/>
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
         <!-- 广点通 End -->
     </application>
 </manifest>
