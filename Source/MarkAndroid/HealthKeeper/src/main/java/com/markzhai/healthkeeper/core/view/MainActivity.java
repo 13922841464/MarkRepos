@@ -1,11 +1,11 @@
 package com.markzhai.healthkeeper.core.view;
 
 import com.markzhai.healthkeeper.core.view.fragment.FragmentSplash;
-import com.markzhai.library.framework.BaseActivity;
 import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.framework.page.FragmentType;
+import com.markzhai.talkingdata.TalkDataActivity;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends TalkDataActivity {
 
     @Override
     protected FragmentRequest installHome() {

@@ -1,2 +1,2 @@
-include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':HealthKeeper', ':GDT_Library'
+include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':HealthKeeper', ':GDT_Library', ':TalkingData_Library'
 include ':PullToRefresh'

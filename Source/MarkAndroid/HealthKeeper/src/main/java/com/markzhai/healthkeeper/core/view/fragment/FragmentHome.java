@@ -5,15 +5,15 @@ import android.view.Gravity;
 import android.view.View;
 
 import com.markzhai.healthkeeper.R;
-import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.widget.MZTopbar;
+import com.markzhai.talkingdata.TalkingDataFragment;
 
 import roboguice.inject.InjectView;
 
 /**
  * Created by marktlzhai on 2015/4/14.
  */
-public class FragmentHome extends BaseFragment {
+public class FragmentHome extends TalkingDataFragment {
 
     @InjectView(R.id.home_drawer)
     private DrawerLayout drawer;
