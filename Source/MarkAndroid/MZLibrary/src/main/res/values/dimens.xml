@@ -18,4 +18,8 @@
     <dimen name="height_topbar_icon">40dp</dimen>
     <!-- Dialog 标题栏高度 -->
     <dimen name="height_dialog_topbar">40dp</dimen>
+
+    <!-- Drawer -->
+    <dimen name="drawer_width">220dp</dimen>
+    <dimen name="drawer_icon_size">60dp</dimen>
 </resources>

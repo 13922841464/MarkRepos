@@ -21,4 +21,14 @@
         <item name="android:windowEnterAnimation">@anim/fade_in</item>
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
+
+    <style name="Default_Button">
+        <item name="android:background">@drawable/selector_default_button</item>
+        <item name="android:textColor">@color/color_default_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">@dimen/margin_small_more</item>
+        <item name="android:paddingBottom">@dimen/margin_small_more</item>
+        <item name="android:paddingLeft">@dimen/margin_normal</item>
+        <item name="android:paddingRight">@dimen/margin_normal</item>
+    </style>
 </resources>

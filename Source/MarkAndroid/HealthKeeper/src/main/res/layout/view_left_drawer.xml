@@ -4,28 +4,15 @@
     android:layout_height="match_parent"
     android:background="@color/color_bg_drawer">
 
-    <LinearLayout
-        android:id="@+id/drawer_nologin_layout"
+    <ExpandableListView
+        android:id="@+id/drawer_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:background="@color/color_bg_button_press">
-
-        <ImageView
-            android:layout_width="@dimen/drawer_icon_size"
-            android:layout_height="@dimen/drawer_icon_size"
-            android:src="@drawable/icon_wechat" />
-
-        <ImageView
-            android:layout_width="@dimen/drawer_icon_size"
-            android:layout_height="@dimen/drawer_icon_size"
-            android:src="@drawable/icon_qq" />
-
-        <ImageView
-            android:layout_width="@dimen/drawer_icon_size"
-            android:layout_height="@dimen/drawer_icon_size"
-            android:src="@drawable/icon_weibo" />
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none"
+        android:groupIndicator="@color/transparent"
+        android:dividerHeight="@dimen/margin_small"
+        android:divider="@color/transparent" />
 
 </RelativeLayout>
