@@ -1,6 +1,11 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="setting">Settings</string>
+    <string name="more">More</string>
+    <string name="feedback">Feedback</string>
+    <string name="about">About</string>
+    <string name="share">Share</string>
 
     <string name="exit_press_again">Press again to exit the program</string>
 
