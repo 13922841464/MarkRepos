@@ -5,11 +5,15 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.markzhai.library.R;
 
 /**
  * UI相关工具类 Created by marktlzhai on 2014/12/24.
@@ -117,6 +121,17 @@ public class UIUtils {
             return;
         }
         tv.setTypeface(tf);
+    }
+
+    public static Button getTestButton(Context context, String buttonTXT) {
+        Button btn = new Button(context);
+        btn.setBackgroundResource(R.drawable.selector_default_button);
+        btn.setTextColor(context.getResources().getColor(R.color.color_default_text));
+        btn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        btn.setPadding(context.getResources().getDimensionPixelOffset(R.dimen.margin_normal), context.getResources().getDimensionPixelOffset(R.dimen.margin_small_more), context.getResources().getDimensionPixelOffset(R.dimen.margin_normal), context.getResources().getDimensionPixelOffset(R.dimen.margin_small_more));
+        btn.setText(buttonTXT);
+
+        return btn;
     }
 
     public static TextView getTestView(Context context, String message) {

@@ -39,8 +39,6 @@ public abstract class BaseFragment extends RoboFragment {
         return null;
     }
 
-    private BaseActivity baseActivity;
-
     protected View rootView;
 
     protected static final Handler handler = new Handler();
@@ -53,8 +51,6 @@ public abstract class BaseFragment extends RoboFragment {
      * Async-http-client
      */
     protected AsyncHttpClient httpClient;
-
-    protected static final Handler inHandler = new Handler();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -85,7 +81,6 @@ public abstract class BaseFragment extends RoboFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        this.baseActivity = (BaseActivity) getActivity();
         init();
     }
 
@@ -115,7 +110,7 @@ public abstract class BaseFragment extends RoboFragment {
     }
 
     public BaseActivity getBaseActivity() {
-        return this.baseActivity;
+        return BaseApplication.getBaseActivity();
     }
 
     public void showToast(String message) {
@@ -151,7 +146,7 @@ public abstract class BaseFragment extends RoboFragment {
     }
 
     public void startFragment(int layoutID, FragmentRequest request) {
-        baseActivity.startFragment(layoutID, request);
+        BaseApplication.getBaseActivity().startFragment(layoutID, request);
     }
 
     public boolean isEquals(Object o) {
@@ -178,5 +173,9 @@ public abstract class BaseFragment extends RoboFragment {
         if (isVisibleToUser) {
             showToUser();
         }
+    }
+
+    protected void postDelayed(Runnable runnable, long delay) {
+        handler.postDelayed(runnable, delay);
     }
 }

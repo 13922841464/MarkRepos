@@ -1,5 +1,6 @@
 package com.markzhai.healthkeeper.core;
 
+import com.markzhai.library.framework.BaseActivity;
 import com.markzhai.library.framework.BaseApplication;
 import com.markzhai.talkingdata.TalkingData;
 

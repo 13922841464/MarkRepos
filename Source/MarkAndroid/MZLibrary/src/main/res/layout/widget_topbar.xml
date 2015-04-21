@@ -14,7 +14,8 @@
         android:scaleType="fitXY"
         android:clickable="true"
         android:background="@drawable/selector_black_alpha"
-        android:src="@drawable/icon_menu" />
+        android:src="@drawable/icon_menu"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/topbar_title"
@@ -35,5 +36,6 @@
         android:scaleType="fitXY"
         android:clickable="true"
         android:background="@drawable/selector_black_alpha"
-        android:src="@drawable/icon_menu" />
+        android:src="@drawable/icon_menu"
+        android:visibility="gone" />
 </RelativeLayout>

@@ -1,7 +1,9 @@
 package com.markzhai.healthkeeper.core.view.views;
 
 import android.content.Context;
+import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +38,10 @@ public class LeftDrawerView extends RelativeLayout {
         void feedbackClicked();
 
         void shareClicked();
+
+        void settingClicked();
+
+        void aboutClicked();
     }
 
     private ListView drawerList;
@@ -63,32 +69,46 @@ public class LeftDrawerView extends RelativeLayout {
     private void initView() {
         View rootView = LayoutInflater.from(getContext()).inflate(R.layout.view_left_drawer, null, false);
 
+        rootView.findViewById(R.id.button_about).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clickListener != null) {
+                    clickListener.aboutClicked();
+                }
+            }
+        });
+
+        rootView.findViewById(R.id.button_share).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clickListener != null) {
+                    clickListener.shareClicked();
+                }
+            }
+        });
+
+        rootView.findViewById(R.id.button_setting).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clickListener != null) {
+                    clickListener.settingClicked();
+                }
+            }
+        });
+
+        rootView.findViewById(R.id.button_feedback).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clickListener != null) {
+                    clickListener.feedbackClicked();
+                }
+            }
+        });
+
         loadDrawerList();
         drawerList = (ListView) rootView.findViewById(R.id.drawer_list);
         drawerListAdapter = new DrawerListAdapter();
         drawerList.setAdapter(drawerListAdapter);
-        drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (LeftDrawerView.this.clickListener != null) {
-                    int iconID = (int) parent.getItemIdAtPosition(position);
-                    switch (iconID) {
-                        case R.drawable.icon_medical_center_normal:
-                            LeftDrawerView.this.clickListener.medicalCenterClicked();
-                            break;
-                        case R.drawable.icon_medical_corp_normal:
-                            LeftDrawerView.this.clickListener.medicalCorpClicked();
-                            break;
-                        case R.drawable.icon_health_knowledge_normal:
-                            LeftDrawerView.this.clickListener.healthKnowledgeClicked();
-                            break;
-                        case R.drawable.icon_health_food_normal:
-                            LeftDrawerView.this.clickListener.healthFoodsClicked();
-                            break;
-                    }
-                }
-            }
-        });
 
         addView(rootView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
@@ -134,7 +154,7 @@ public class LeftDrawerView extends RelativeLayout {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             convertView = layoutInflater.inflate(R.layout.drawer_list_item, parent, false);
 
             ImageView iconView = (ImageView) convertView.findViewById(R.id.drawer_list_icon);
@@ -145,6 +165,29 @@ public class LeftDrawerView extends RelativeLayout {
             iconView.setImageResource(item.drawerIcon);
             nameView.setText(item.drawerNameRes);
             arrowView.setVisibility(item.hasArrow ? View.VISIBLE : View.GONE);
+
+            convertView.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (LeftDrawerView.this.clickListener != null) {
+                        int iconID = (int) getItemId(position);
+                        switch (iconID) {
+                            case R.drawable.icon_medical_center_normal:
+                                LeftDrawerView.this.clickListener.medicalCenterClicked();
+                                break;
+                            case R.drawable.icon_medical_corp_normal:
+                                LeftDrawerView.this.clickListener.medicalCorpClicked();
+                                break;
+                            case R.drawable.icon_health_knowledge_normal:
+                                LeftDrawerView.this.clickListener.healthKnowledgeClicked();
+                                break;
+                            case R.drawable.icon_health_food_normal:
+                                LeftDrawerView.this.clickListener.healthFoodsClicked();
+                                break;
+                        }
+                    }
+                }
+            });
 
             return convertView;
         }

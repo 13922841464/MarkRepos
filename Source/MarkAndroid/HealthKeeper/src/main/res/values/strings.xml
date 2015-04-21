@@ -40,4 +40,10 @@
     <string name="health_drug">药品直达</string>
     <string name="health_drug_hint">药品信息查询平台，提供最全的药品信息</string>
 
+    <!-- View -->
+    <string name="filter">筛选条件：</string>
+    <string name="department_filter">科室：{0}</string>
+    <string name="place_filter">部位：{0}</string>
+    <string name="no_filter">全部</string>
+    <string name="start_filter">开始\n过滤</string>
 </resources>

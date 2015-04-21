@@ -5,6 +5,6 @@ package com.markzhai.library.exception;
  */
 public class AccountParseException extends Exception {
     public AccountParseException() {
-        super("account parse error.");
+        super("解析用户失败");
     }
 }

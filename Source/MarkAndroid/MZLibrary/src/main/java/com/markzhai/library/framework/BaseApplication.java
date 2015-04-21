@@ -48,6 +48,8 @@ public abstract class BaseApplication extends Application {
 
     public static boolean ormSupport = false;
 
+    private static BaseActivity baseActivity;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -86,5 +88,13 @@ public abstract class BaseApplication extends Application {
 
     public static Application getApplication() {
         return instance;
+    }
+
+    public static void setBaseActivity(BaseActivity baseActivity) {
+        BaseApplication.baseActivity = baseActivity;
+    }
+
+    public static BaseActivity getBaseActivity() {
+        return baseActivity;
     }
 }

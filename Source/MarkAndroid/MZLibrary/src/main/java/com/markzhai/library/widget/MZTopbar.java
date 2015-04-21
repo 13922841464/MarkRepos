@@ -88,8 +88,11 @@ public class MZTopbar extends RelativeLayout {
     public void setIcon(int iconRes, OnClickListener listener) {
         if (iconRes <= 0) {
             iconView.setImageDrawable(new ColorDrawable(Color.TRANSPARENT));
+            iconView.setVisibility(View.GONE);
+            return;
         } else {
             iconView.setImageResource(iconRes);
+            iconView.setVisibility(View.VISIBLE);
         }
 
         if (listener == null) {
@@ -103,8 +106,11 @@ public class MZTopbar extends RelativeLayout {
     public void setMenu(int menuRes, OnClickListener listener) {
         if (menuRes <= 0) {
             menuView.setImageDrawable(new ColorDrawable(Color.TRANSPARENT));
+            menuView.setVisibility(View.GONE);
+            return;
         } else {
             menuView.setImageResource(menuRes);
+            menuView.setVisibility(View.VISIBLE);
         }
         if (listener == null) {
             menuView.setClickable(false);

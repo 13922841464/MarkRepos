@@ -2,6 +2,8 @@ package com.markzhai.library.framework;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -46,10 +48,21 @@ public abstract class BaseActivity extends RoboFragmentActivity {
      */
     protected AsyncHttpClient httpClient;
 
+    private DrawerLayout drawer;
+    private int drawerGravity = Gravity.START;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        BaseApplication.setBaseActivity(this);
+
         init();
+    }
+
+    public void setDrawer(DrawerLayout drawer, int drawerGravity) {
+        this.drawer = drawer;
+        this.drawerGravity = drawerGravity;
     }
 
     /**
@@ -114,6 +127,11 @@ public abstract class BaseActivity extends RoboFragmentActivity {
 
     @Override
     public void onBackPressed() {
+        if (drawer != null && drawer.isDrawerOpen(drawerGravity)) {
+            drawer.closeDrawer(drawerGravity);
+            return;
+        }
+
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             super.onBackPressed();
         } else {
