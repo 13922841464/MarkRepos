@@ -1,4 +1,4 @@
-package com.markzhai.library.framework.ext;
+package com.markzhai.library.widget.pager;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
