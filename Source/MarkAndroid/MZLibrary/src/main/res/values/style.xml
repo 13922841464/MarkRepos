@@ -31,4 +31,11 @@
         <item name="android:paddingLeft">@dimen/margin_normal</item>
         <item name="android:paddingRight">@dimen/margin_normal</item>
     </style>
+
+    <style name="Default_EditText">
+        <item name="android:background">@drawable/default_edit_bg</item>
+        <item name="android:textColor">@color/color_font_spec</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">@dimen/margin_small_more</item>
+    </style>
 </resources>
