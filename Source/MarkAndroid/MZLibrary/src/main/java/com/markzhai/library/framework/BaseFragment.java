@@ -27,6 +27,8 @@ public abstract class BaseFragment extends RoboFragment {
 
     public abstract void init();
 
+    public abstract void initData();
+
     public void initTopbar(MZTopbar topbar) {
 
     }
@@ -82,6 +84,12 @@ public abstract class BaseFragment extends RoboFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         init();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                initData();
+            }
+        }, 100);
     }
 
     @Override

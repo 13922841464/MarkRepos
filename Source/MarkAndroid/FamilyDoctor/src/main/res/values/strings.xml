@@ -2,4 +2,15 @@
     <string name="app_name">家庭医生</string>
     <string name="app_copy_right">&#169;2014-2016 版权所有 玛卡工作室</string>
 
+    <!-- FragmentHome -->
+    <string name="category_all">全部</string>
+    <string name="health_news">健康快报</string>
+    <string name="category_1">企业要闻</string>
+    <string name="category_2">医疗新闻</string>
+    <string name="category_3">生活贴士</string>
+    <string name="category_4">药品新闻</string>
+    <string name="category_5">食品新闻</string>
+    <string name="category_6">社会热点</string>
+    <string name="category_7">疾病快讯</string>
+
 </resources>

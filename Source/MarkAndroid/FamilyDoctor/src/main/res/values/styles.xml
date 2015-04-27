@@ -18,4 +18,9 @@
         <item name="android:textColor">@color/color_bg_drawer</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="font_news_item_date">
+        <item name="android:textColor">@color/color_font_spec</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 </resources>

@@ -36,8 +36,7 @@ public class ImageUtils {
         ImageUtils.context = context;
 
         if (displayImageOptions == null) {
-            displayImageOptions = new DisplayImageOptions.Builder().showImageForEmptyUri(R.drawable.load_error).showImageOnFail(R.drawable.load_error).cacheInMemory(true).cacheOnDisk(true)
-                    .considerExifParams(true).displayer(new FadeInBitmapDisplayer(20)).build();
+            displayImageOptions = new DisplayImageOptions.Builder().cacheInMemory(true).cacheOnDisk(true).considerExifParams(true).displayer(new FadeInBitmapDisplayer(20)).build();
         }
 
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).threadPriority(Thread.NORM_PRIORITY - 2).denyCacheImageMultipleSizesInMemory().diskCacheFileNameGenerator(new Md5FileNameGenerator())

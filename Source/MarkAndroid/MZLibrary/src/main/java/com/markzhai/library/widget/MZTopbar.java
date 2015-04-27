@@ -123,10 +123,12 @@ public class MZTopbar extends RelativeLayout {
     public void setMenuList(int menuRes, List<? extends DragListTitle> itemList, DragListClickCallback callback) {
         if (menuRes <= 0) {
             menuView.setImageDrawable(new ColorDrawable(Color.TRANSPARENT));
+            menuView.setVisibility(View.GONE);
         } else {
             dragListClickCallback = callback;
 
             menuView.setImageResource(menuRes);
+            menuView.setVisibility(View.VISIBLE);
             ListView dragList = new ListView(getContext());
             dragList.setDivider(new ColorDrawable(Color.TRANSPARENT));
             dragList.setDividerHeight(0);

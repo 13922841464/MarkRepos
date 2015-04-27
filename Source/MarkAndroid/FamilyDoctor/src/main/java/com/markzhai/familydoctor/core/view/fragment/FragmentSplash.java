@@ -36,4 +36,9 @@ public class FragmentSplash extends TalkingDataFragment {
             }
         }, BuildConfig.DEBUG ? 0L : 2000L);
     }
+
+    @Override
+    public void initData() {
+
+    }
 }

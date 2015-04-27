@@ -13,6 +13,8 @@ import com.markzhai.library.utils.SigntureUtil;
  */
 public abstract class BaseApplication extends Application {
 
+    private static final String SP_FIRST_RUN = "FIRST_RUN";
+
     public static final String GDT_TEST_APPID = "1101152570";
     public static final String GDT_TEST_BANNER_POSID = "9079537218417626401";
 
@@ -84,6 +86,14 @@ public abstract class BaseApplication extends Application {
         ImageUtils.destroy();
 
         ormSupport = false;
+    }
+
+    public static boolean isFirstRun() {
+        boolean firstRun = SPUtils.getBoolean(SP_FIRST_RUN, true);
+        if (firstRun) {
+            SPUtils.putBoolean(SP_FIRST_RUN, false);
+        }
+        return firstRun;
     }
 
     public static Application getApplication() {

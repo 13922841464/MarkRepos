@@ -24,4 +24,5 @@ dependencies {
     compile project(':TalkingData_Library')
     compile project(':GDT_Library')
     compile project(':TencentLibrary')
+    compile project(':PullToRefresh')
 }
