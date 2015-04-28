@@ -12,5 +12,13 @@
     <string name="category_5">食品新闻</string>
     <string name="category_6">社会热点</string>
     <string name="category_7">疾病快讯</string>
+    <string name="publish_date">{0} 发布</string>
 
+    <!-- Drawer -->
+    <string name="drawer_medical_center">医疗中心</string>
+    <string name="drawer_foods">食品药品</string>
+    <string name="drawer_hospital">医院药店</string>
+    <string name="drawer_question">健康提问</string>
+    <string name="drawer_feedback">用户反馈</string>
+    <string name="drawer_about">关于</string>
 </resources>

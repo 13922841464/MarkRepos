@@ -1,16 +1,12 @@
 package com.markzhai.familydoctor.core.model;
 
-import com.markzhai.library.framework.BaseApplication;
 import com.markzhai.library.framework.core.model.MZModel;
-import com.markzhai.talkingdata.TalkingData;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
-import org.apache.commons.lang3.time.DateUtils;
 import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -18,7 +14,7 @@ import java.util.Locale;
  */
 public class HealthNewsModel extends MZModel {
 
-    private static final String HOST = "http://www.yi18.net/";
+    public static final String HOST = "http://www.yi18.net/";
 
     public int id = 0;
     public String title = "";
@@ -36,7 +32,7 @@ public class HealthNewsModel extends MZModel {
             id = jsonOBJ.optInt("id", 0);
             title = jsonOBJ.optString("title", "");
             tag = jsonOBJ.optString("tag", "");
-            imgURL = HOST + jsonOBJ.optString("img", "");
+            imgURL = jsonOBJ.optString("img", "");
             clickCount = jsonOBJ.optInt("count", 0);
             date = jsonOBJ.optString("time", "");
         }
@@ -45,7 +41,7 @@ public class HealthNewsModel extends MZModel {
     public String getDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss a", Locale.US);
         try {
-            return DateFormatUtils.SMTP_DATETIME_FORMAT.format(sdf.parse(date));
+            return DateFormatUtils.ISO_DATE_FORMAT.format(sdf.parse(date));
         } catch (ParseException e) {
             e.printStackTrace();
             return date;

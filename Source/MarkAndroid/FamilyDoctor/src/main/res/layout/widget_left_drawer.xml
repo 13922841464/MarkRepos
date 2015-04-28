@@ -3,6 +3,20 @@
     android:orientation="vertical"
     android:layout_width="@dimen/drawer_width"
     android:layout_height="match_parent"
-    android:background="@color/color_bg_topbar">
+    android:background="@color/color_bg_drawer_item">
+
+    <ImageView
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="@dimen/drawer_top_img_height"
+        android:src="@drawable/draw_top_bg"
+        android:scaleType="fitXY" />
+
+    <ListView
+        android:id="@+id/drawer_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:listSelector="@color/color_bg_drawer"
+        android:divider="@color/transparent" />
 
 </LinearLayout>

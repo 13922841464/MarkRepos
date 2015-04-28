@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/drawer_list_height"
+    android:background="@drawable/selector_drawer_item">
+
+    <ImageView
+        android:id="@+id/drawer_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/drawer_about"
+        android:padding="@dimen/margin_small" />
+
+    <TextView
+        android:id="@+id/drawer_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        style="@style/font_title"
+        android:text="@string/drawer_medical_center" />
+</LinearLayout>

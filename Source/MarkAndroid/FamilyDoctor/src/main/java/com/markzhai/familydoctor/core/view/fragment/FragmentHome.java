@@ -15,11 +15,14 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.markzhai.familydoctor.R;
 import com.markzhai.familydoctor.core.controller.HealthNewsController;
 import com.markzhai.familydoctor.core.model.HealthNewsModel;
+import com.markzhai.familydoctor.core.view.weiget.LeftDrawer;
 import com.markzhai.library.framework.BaseApplication;
 import com.markzhai.library.framework.BaseFragment;
+import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.widget.MZTopbar;
 
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +31,7 @@ import roboguice.inject.InjectView;
 /**
  * Created by marktlzhai on 2015/4/24.
  */
-public class FragmentHome extends BaseFragment implements HealthNewsController.HealthNewsCallback, MZTopbar.DragListClickCallback {
+public class FragmentHome extends BaseFragment implements HealthNewsController.HealthNewsCallback, MZTopbar.DragListClickCallback, LeftDrawer.DrawerClickListener {
 
     private static final int LOAD_LIMIT = 20;
 
@@ -36,6 +39,8 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
 
     @InjectView(R.id.home_drawer)
     private DrawerLayout drawer;
+    @InjectView(R.id.left_drawer)
+    private LeftDrawer leftDrawerView;
 
     @InjectView(R.id.main_page_list)
     private PullToRefreshListView newsList;
@@ -55,6 +60,7 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
             openDrawer();
         }
         getBaseActivity().setDrawer(drawer, Gravity.START);
+        leftDrawerView.setListener(this);
 
         newsAdapter = new NewsAdapter();
         newsList.setMode(PullToRefreshBase.Mode.BOTH);
@@ -142,6 +148,36 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
         HealthNewsController.load(currentPage, LOAD_LIMIT, currentType, this);
     }
 
+    @Override
+    public void medicalCenterClick() {
+        closeDrawer();
+    }
+
+    @Override
+    public void foodsClick() {
+        closeDrawer();
+    }
+
+    @Override
+    public void hospitalClick() {
+        closeDrawer();
+    }
+
+    @Override
+    public void questionClick() {
+        closeDrawer();
+    }
+
+    @Override
+    public void feedbackClick() {
+        closeDrawer();
+    }
+
+    @Override
+    public void aboutClick() {
+        closeDrawer();
+    }
+
     class NewsAdapter extends BaseAdapter {
 
         private List<HealthNewsModel> data;
@@ -180,6 +216,7 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
 
                 holder.newsImg = (ImageView) view.findViewById(R.id.news_img);
                 holder.newsTitle = (TextView) view.findViewById(R.id.news_title);
+                holder.newsCategory = (TextView) view.findViewById(R.id.news_category);
                 holder.newsDate = (TextView) view.findViewById(R.id.news_date);
 
                 view.setTag(holder);
@@ -189,8 +226,16 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
 
             holder.newsImg.setImageResource(R.drawable.loading);
             holder.newsTitle.setText(item.title);
-            holder.newsDate.setText(item.getDate());
-            ImageUtils.displayImage(item.imgURL, holder.newsImg);
+            holder.newsCategory.setText(item.tag);
+            holder.newsDate.setText(MessageFormat.format(getString(R.string.publish_date), item.getDate()));
+            ImageUtils.displayImage(HealthNewsModel.HOST + item.imgURL, holder.newsImg);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startFragment(FragmentNewsDetail.getRequest(item));
+                }
+            });
 
             return view;
         }
@@ -207,6 +252,7 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
     class ViewHolder {
         public ImageView newsImg;
         public TextView newsTitle;
+        public TextView newsCategory;
         public TextView newsDate;
     }
 

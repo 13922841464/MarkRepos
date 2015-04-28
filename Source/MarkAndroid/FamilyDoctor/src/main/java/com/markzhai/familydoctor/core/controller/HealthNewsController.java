@@ -58,11 +58,53 @@ public class HealthNewsController extends MZController {
     private static final String ERROR_NET = "服务器连接超时，请稍后再试。";
 
     public static final String URL_HEALTH_NEWS_LIST = "http://api.yi18.net/news/list";
+    public static final String URL_HEALTH_NEWS_DETAIL = "http://api.yi18.net/news/show";
 
     public static interface HealthNewsCallback {
         void loadNewsSuccess(List<HealthNewsModel> result);
 
         void loadNewsFailure(String errorMessage);
+    }
+
+    public static interface HealthNewsDetailCallback {
+        void loadNewsDetailSuccess(String detail);
+
+        void loadNewsDetailFailure(String errorMessage);
+    }
+
+    public static void loadDetails(int newsID, final HealthNewsDetailCallback callback) {
+        RequestParams params = new RequestParams();
+        params.add("id", String.valueOf(newsID));
+
+        asyncHttpClient.get(URL_HEALTH_NEWS_DETAIL, params, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                boolean success = response.optBoolean("success", false);
+                if (success) {
+                    JSONObject resultObj = response.optJSONObject("yi18");
+                    if (resultObj != null) {
+                        if (callback != null) {
+                            callback.loadNewsDetailSuccess(resultObj.optString("message"));
+                        }
+                    }
+                } else {
+                    TalkingData.onError(BaseApplication.getApplication(), new Exception(ERROR_NET));
+                    if (callback != null) {
+                        callback.loadNewsDetailFailure(ERROR_NET);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                TalkingData.onError(BaseApplication.getApplication(), throwable);
+                if (callback != null) {
+                    callback.loadNewsDetailFailure(ERROR_NET);
+                }
+            }
+        });
     }
 
     public static void load(int page, int limit, NewsType type, final HealthNewsCallback callback) {
