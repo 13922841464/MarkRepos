@@ -18,7 +18,6 @@ import com.markzhai.familydoctor.core.model.HealthNewsModel;
 import com.markzhai.familydoctor.core.view.weiget.LeftDrawer;
 import com.markzhai.library.framework.BaseApplication;
 import com.markzhai.library.framework.BaseFragment;
-import com.markzhai.library.framework.page.FragmentRequest;
 import com.markzhai.library.utils.ImageUtils;
 import com.markzhai.library.widget.MZTopbar;
 

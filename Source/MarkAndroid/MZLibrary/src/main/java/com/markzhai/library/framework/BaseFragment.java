@@ -54,6 +54,8 @@ public abstract class BaseFragment extends RoboFragment {
      */
     protected AsyncHttpClient httpClient;
 
+    private boolean needReload = false;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -64,7 +66,15 @@ public abstract class BaseFragment extends RoboFragment {
             e.printStackTrace();
         }
 
-        rootView = inflater.inflate(getLayoutResId(), container, false);
+        if (rootView == null) {
+            rootView = inflater.inflate(getLayoutResId(), container, false);
+            needReload = true;
+        } else {
+            ViewGroup parent = (ViewGroup) rootView.getParent();
+            if (parent != null) {
+                parent.removeViewInLayout(rootView);
+            }
+        }
 
         return rootView;
     }
@@ -72,24 +82,30 @@ public abstract class BaseFragment extends RoboFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        httpClient = new AsyncHttpClient();
+        if(needReload) {
+            httpClient = new AsyncHttpClient();
 
-        topbar = (MZTopbar) rootView.findViewById(R.id.topbar);
-        if (topbar != null) {
-            initTopbar(topbar);
+            topbar = (MZTopbar) rootView.findViewById(R.id.topbar);
+            if (topbar != null) {
+                initTopbar(topbar);
+            }
         }
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        init();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                initData();
-            }
-        }, 100);
+        if(needReload) {
+            init();
+            needReload = false;
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    initData();
+                }
+            }, 100);
+
+        }
     }
 
     @Override
