@@ -150,6 +150,7 @@ public class FragmentHome extends BaseFragment implements HealthNewsController.H
     @Override
     public void medicalCenterClick() {
         closeDrawer();
+        startFragment(FragmentMedicalCenter.class);
     }
 
     @Override

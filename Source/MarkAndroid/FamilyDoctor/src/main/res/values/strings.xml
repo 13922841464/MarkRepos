@@ -21,4 +21,17 @@
     <string name="drawer_question">健康提问</string>
     <string name="drawer_feedback">用户反馈</string>
     <string name="drawer_about">关于</string>
+
+    <!-- FragmentMedicalCenter -->
+    <string name="medical_disease_info">疾病信息</string>
+    <string name="medical_disease_info_desc">疾病百科提供详尽的:疾病查询,疾病分析,疾病就医,疾病治疗,疾病预防,疾病诊断,疾病概述 等相关的疾病信息。 </string>
+    <string name="medical_symptoms_find">病状查找</string>
+    <string name="medical_symptoms_find_desc">病状大全提供详尽的:病状查询,病状分析,病状就医,病状治疗,病状预防,病状诊断,病状概述。 </string>
+    <string name="medical_checking_item">检查项目</string>
+    <string name="medical_checking_item_desc">检查库为你提供详尽的:疾病检查,病种检查,检查介绍。 </string>
+    <string name="medical_surgery_item">手术项目</string>
+    <string name="medical_surgery_item_desc">详细的手术方法、手术资料、手术大全、手术详情、手术后注意事项、相关医院、相关医生等查询。 </string>
+
+    <!-- FragmentDiseaseInfo -->
+    <string name="disease_search_hint">输入疾病信息，病状信息查找</string>
 </resources>

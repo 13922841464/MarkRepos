@@ -6,4 +6,8 @@
     <dimen name="home_item_icon_size">70dp</dimen>
 
     <dimen name="drawer_top_img_height">150dp</dimen>
+
+    <!-- FragmentMedicalCenter -->
+    <dimen name="medical_center_item_height">125dp</dimen>
+    <dimen name="medical_center_item_arrow_size">20dp</dimen>
 </resources>

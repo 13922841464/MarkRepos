@@ -137,6 +137,10 @@ public abstract class BaseFragment extends RoboFragment {
         return BaseApplication.getBaseActivity();
     }
 
+    public void showToast(int messageRes) {
+        showShortToast(messageRes);
+    }
+
     public void showToast(String message) {
         showShortToast(message);
     }

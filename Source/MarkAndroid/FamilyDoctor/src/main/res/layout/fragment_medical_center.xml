@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_bg_base">
+
+    <com.markzhai.library.widget.MZTopbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_topbar"/>
+
+    <ListView
+        android:id="@+id/medical_center_function_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/margin_normal"
+        android:padding="@dimen/margin_normal"
+        android:scrollbars="none"/>
+</RelativeLayout>

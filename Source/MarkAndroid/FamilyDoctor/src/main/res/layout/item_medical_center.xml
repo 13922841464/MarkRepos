@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/medical_center_item_height"
+                android:background="@drawable/selector_default_item"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_normal">
+
+    <TextView
+        android:id="@+id/medical_center_name"
+        style="@style/font_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/medical_disease_info"/>
+
+    <TextView
+        android:id="@+id/medical_center_desc"
+        style="@style/font_body_hint"
+        android:layout_marginTop="@dimen/margin_small_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medical_center_name"
+        android:text="@string/medical_disease_info_desc"/>
+</RelativeLayout>

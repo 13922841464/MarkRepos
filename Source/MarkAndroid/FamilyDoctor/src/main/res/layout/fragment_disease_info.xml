@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg_base"
+              android:orientation="vertical">
+
+    <com.markzhai.library.widget.MZTopbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_topbar"/>
+
+    <LinearLayout
+        android:id="@+id/disease_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small_more"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/disease_search_input"
+            style="@style/Default_EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:hint="@string/disease_search_hint"/>
+
+        <Button
+            android:id="@+id/disease_search_button"
+            style="@style/Default_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small_more"
+            android:text="@string/search"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/disease_search_result_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:padding="@dimen/margin_normal"
+        android:scrollbars="none"/>
+</LinearLayout>
