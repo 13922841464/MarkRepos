@@ -1,2 +1,2 @@
-include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':GDT_Library', ':TalkingData_Library', ':FamilyDoctor', ':TencentLibrary'
+include ':MZLibrary', ':ViewPagerIndicator', ':apkinstall', ':GDT_Library', ':TalkingData_Library', ':FamilyDoctor', ':TencentLibrary', ':Diablo3'
 include ':PullToRefresh'

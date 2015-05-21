@@ -12,4 +12,6 @@ public class MZController {
     public static final JsonParseException JSON_PARSE_EXCEPTION = new JsonParseException();
 
     protected static final AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
+
+    protected static final String PC_USER_AGENT = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0) QQBrowser/8.1.3792.400";
 }
