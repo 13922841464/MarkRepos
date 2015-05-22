@@ -1,11 +1,8 @@
 package com.markzhai.diablo3.core.model;
 
-import com.markzhai.diablo3.utils.JSoupUtils;
+import com.markzhai.jsouplib.JSoupUtils;
 import com.markzhai.library.framework.core.model.MZModel;
-import com.markzhai.library.utils.StringUtils;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.util.EntityUtils;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -19,16 +16,8 @@ public class SliderNews extends MZModel {
     public String newsUrl;
 
     public SliderNews(Element e) throws Exception {
-        Elements imgEs = e.getElementsByTag("img");
-        Elements titleEs = e.getElementsByTag("span");
-        if (JSoupUtils.isNotEmpty(imgEs)) {
-            imageUrl = imgEs.get(0).attr("src");
-        }
-
-        if (JSoupUtils.isNotEmpty(titleEs)) {
-            title = titleEs.text();
-        }
-
+        imageUrl = JSoupUtils.getSubElementByTagFirst(e, "img").attr("src");
+        title = JSoupUtils.getSubElementByTagFirst(e, "span").text();
         newsUrl = e.attr("href");
     }
 

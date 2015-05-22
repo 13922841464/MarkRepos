@@ -3,7 +3,7 @@ package com.markzhai.diablo3.core.controller;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.markzhai.diablo3.core.model.NormalNews;
 import com.markzhai.diablo3.core.model.SliderNews;
-import com.markzhai.diablo3.utils.JSoupUtils;
+import com.markzhai.jsouplib.JSoupUtils;
 import com.markzhai.library.framework.BaseApplication;
 import com.markzhai.library.framework.core.controller.MZController;
 import com.markzhai.talkingdata.TalkingData;
@@ -51,27 +51,43 @@ public class NewsController extends MZController {
             public void onSuccess(int statusCode, Header[] headers, String responseString) {
                 Document htmlDoc = Jsoup.parse(responseString);
 
-                Elements slideHtml = htmlDoc.getElementsByAttributeValue("class", "slideshow-image click-image");
-                if (JSoupUtils.isNotEmpty(slideHtml)) {
-                    Elements slideElements = slideHtml.get(0).getElementsByTag("a");
-                    if (JSoupUtils.isNotEmpty(slideElements)) {
-                        List<SliderNews> result = new ArrayList<SliderNews>();
+                Elements slideElements = JSoupUtils.getSubElementByAttrValueFirst(htmlDoc, "class", "slideshow-image click-image").getElementsByTag("a");
 
-                        for (int i = 0; i < slideElements.size(); i++) {
+                if (JSoupUtils.isNotEmpty(slideElements)) {
+                    List<SliderNews> sliderNewsResult = new ArrayList<SliderNews>();
+
+                    for (int i = 0; i < slideElements.size(); i++) {
+                        try {
+                            sliderNewsResult.add(new SliderNews(slideElements.get(i)));
+                        } catch (Exception e) {
+                            TalkingData.onError(BaseApplication.getApplication(), e);
+                        }
+                    }
+
+                    if (newsLoadCallback != null) {
+                        newsLoadCallback.loadSliderNewsSuccess(sliderNewsResult);
+                    }
+                }
+
+                Elements newsImgElements = JSoupUtils.getSubElementByAttrValueFirst(htmlDoc, "class", "blog-articles").getElementsByAttributeValue("class", "article-image");
+                Elements newsContentElements = JSoupUtils.getSubElementByAttrValueFirst(htmlDoc, "class", "blog-articles").getElementsByAttributeValue("class", "article-content");
+
+                if (JSoupUtils.isNotEmpty(newsImgElements) && JSoupUtils.isNotEmpty(newsContentElements)) {
+                    List<NormalNews> newsResult = new ArrayList<NormalNews>();
+                    if (newsImgElements.size() == newsContentElements.size()) {
+                        for (int i = 0; i < newsImgElements.size(); i++) {
                             try {
-                                result.add(new SliderNews(slideElements.get(i)));
+                                newsResult.add(new NormalNews(newsImgElements.get(i), newsContentElements.get(i)));
                             } catch (Exception e) {
                                 TalkingData.onError(BaseApplication.getApplication(), e);
                             }
                         }
+                    }
 
-                        if (newsLoadCallback != null) {
-                            newsLoadCallback.loadSliderNewsSuccess(result);
-                        }
+                    if (newsLoadCallback != null) {
+                        newsLoadCallback.loadNewsSuccess(newsResult);
                     }
                 }
-
-                Elements newsHtml = htmlDoc.getElementsByAttributeValue("class", "blog-articles");
             }
         });
     }

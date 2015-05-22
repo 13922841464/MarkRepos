@@ -1,1 +1,7 @@
-<resources></resources>
+<resources>
+
+    <!-- FragmentHome -->
+    <dimen name="home_list_height">120dp</dimen>
+    <dimen name="home_list_image_width">120dp</dimen>
+    <dimen name="home_list_image_height">60dp</dimen>
+</resources>

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:slider="http://schemas.android.com/apk/res-auto"
+    xmlns:resauto="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.markzhai.library.widget.MZTopbar
         android:id="@id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_topbar" />
+        android:layout_height="@dimen/height_topbar"
+        resauto:topbar_title="@string/app_name" />
 
     <com.markzhai.library.widget.slider.SliderLayout
         android:id="@+id/home_slider"
         android:layout_width="match_parent"
         android:layout_height="165dp"
         android:layout_below="@+id/topbar"
-        slider:auto_cycle="true"
-        slider:indicator_visibility="visible"
-        slider:pager_animation="Accordion"
-        slider:pager_animation_span="1100" />
+        resauto:auto_cycle="true"
+        resauto:indicator_visibility="visible"
+        resauto:pager_animation="Accordion"
+        resauto:pager_animation_span="1100" />
 
     <com.markzhai.library.widget.slider.Indicators.PagerIndicator
         android:id="@+id/slider_indicator"
@@ -27,16 +28,26 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        slider:selected_color="#0095BF"
-        slider:selected_height="6dp"
-        slider:selected_padding_left="5dp"
-        slider:selected_padding_right="5dp"
-        slider:selected_width="6dp"
-        slider:shape="oval"
-        slider:unselected_color="#55333333"
-        slider:unselected_height="6dp"
-        slider:unselected_padding_left="5dp"
-        slider:unselected_padding_right="5dp"
-        slider:unselected_width="6dp" />
+        resauto:selected_color="#0095BF"
+        resauto:selected_height="6dp"
+        resauto:selected_padding_left="5dp"
+        resauto:selected_padding_right="5dp"
+        resauto:selected_width="6dp"
+        resauto:shape="oval"
+        resauto:unselected_color="#55333333"
+        resauto:unselected_height="6dp"
+        resauto:unselected_padding_left="5dp"
+        resauto:unselected_padding_right="5dp"
+        resauto:unselected_width="6dp" />
+
+    <ListView
+        android:id="@+id/home_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/home_slider"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/margin_small_more"
+        android:padding="@dimen/margin_small_more"
+        android:scrollbars="none" />
 
 </RelativeLayout>

@@ -82,7 +82,7 @@ public abstract class BaseFragment extends RoboFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if(needReload) {
+        if (needReload) {
             httpClient = new AsyncHttpClient();
 
             topbar = (MZTopbar) rootView.findViewById(R.id.topbar);
@@ -95,7 +95,7 @@ public abstract class BaseFragment extends RoboFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if(needReload) {
+        if (needReload) {
             init();
             needReload = false;
             handler.postDelayed(new Runnable() {

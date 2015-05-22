@@ -1,8 +1,10 @@
 package com.markzhai.library.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.PaintDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -17,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.markzhai.library.R;
+import com.markzhai.library.utils.StringUtils;
 
 import java.util.List;
 
@@ -51,20 +54,20 @@ public class MZTopbar extends RelativeLayout {
 
     public MZTopbar(Context context) {
         super(context);
-        initViews();
+        initViews(null);
     }
 
     public MZTopbar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initViews();
+        initViews(attrs);
     }
 
     public MZTopbar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initViews();
+        initViews(attrs);
     }
 
-    private void initViews() {
+    private void initViews(AttributeSet attrs) {
         rootView = LayoutInflater.from(getContext()).inflate(R.layout.widget_topbar, null, false);
 
         titleView = (TextView) rootView.findViewById(R.id.topbar_title);
@@ -73,6 +76,17 @@ public class MZTopbar extends RelativeLayout {
 
         menuView = (ImageView) rootView.findViewById(R.id.topbar_menu);
         menuView.setImageResource(0);
+
+        if (attrs != null) {
+            final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.MZTopbar);
+            String titleString = a.getString(R.styleable.MZTopbar_topbar_title);
+
+            if (StringUtils.isNotEmpty(titleString)) {
+                setTitle(titleString);
+            }
+
+            a.recycle();
+        }
 
         addView(rootView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
     }

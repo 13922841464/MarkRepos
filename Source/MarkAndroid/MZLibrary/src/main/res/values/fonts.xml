@@ -50,6 +50,12 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <!-- 应用于Link蓝色文字 -->
+    <style name="font_blue_link">
+        <item name="android:textColor">@color/color_font_spec</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <!-- 应用于Topbar文字 -->
     <style name="font_topbar_title">
         <item name="android:textColor">@color/color_font_base</item>
