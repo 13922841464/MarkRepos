@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/drawer_width"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_drawer"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/drawer_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/drawer_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/drawer_job"
+            style="@style/font_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:background="@drawable/selector_drawer_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_normal"
+            android:text="@string/job_title" />
+
+        <TextView
+            android:id="@+id/drawer_level_top"
+            style="@style/font_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/selector_drawer_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_normal"
+            android:text="@string/level_top" />
+
+        <TextView
+            android:id="@+id/drawer_hero_top"
+            style="@style/font_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/selector_drawer_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_normal"
+            android:text="@string/hero_top" />
+
+        <TextView
+            android:id="@+id/drawer_diablo_db"
+            style="@style/font_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/drawer_item_height"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/selector_drawer_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_normal"
+            android:text="@string/diablo_db" />
+    </LinearLayout>
+
+</LinearLayout>

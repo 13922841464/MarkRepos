@@ -1,5 +1,7 @@
 package com.markzhai.diablo3.core.view.fragment;
 
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,17 +14,16 @@ import com.markzhai.diablo3.R;
 import com.markzhai.diablo3.core.controller.NewsController;
 import com.markzhai.diablo3.core.model.NormalNews;
 import com.markzhai.diablo3.core.model.SliderNews;
+import com.markzhai.diablo3.core.view.widget.LeftDrawer;
+import com.markzhai.library.framework.BaseApplication;
 import com.markzhai.library.framework.BaseFragment;
 import com.markzhai.library.utils.CollectionUtils;
 import com.markzhai.library.utils.ImageUtils;
-import com.markzhai.library.utils.UIUtils;
 import com.markzhai.library.widget.MZTopbar;
-import com.markzhai.library.widget.slider.Animations.DescriptionAnimation;
 import com.markzhai.library.widget.slider.Indicators.PagerIndicator;
 import com.markzhai.library.widget.slider.SliderLayout;
 import com.markzhai.library.widget.slider.SliderTypes.BaseSliderView;
 import com.markzhai.library.widget.slider.SliderTypes.TextSliderView;
-import com.markzhai.library.widget.slider.Tricks.ViewPagerEx;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ import roboguice.inject.InjectView;
 /**
  * Created by marktlzhai on 2015/5/20.
  */
-public class FragmentHome extends BaseFragment implements NewsController.NewsLoadCallback {
+public class FragmentHome extends BaseFragment implements NewsController.NewsLoadCallback, LeftDrawer.DrawerClickCallback {
 
     @InjectView(R.id.home_slider)
     private SliderLayout imageSlider;
@@ -44,14 +45,41 @@ public class FragmentHome extends BaseFragment implements NewsController.NewsLoa
     private ListView homeList;
     private HomeListAdapter homeListAdapter;
 
+    @InjectView(R.id.left_drawer)
+    private LeftDrawer leftDrawer;
+
+    @InjectView(R.id.home_drawer)
+    private DrawerLayout drawerLayout;
+
     @Override
     public int getLayoutResId() {
         return R.layout.fragment_home;
     }
 
+    private void toggleDrawer() {
+        if (drawerLayout.isDrawerOpen(Gravity.START)) {
+            drawerLayout.closeDrawer(Gravity.START);
+        } else {
+            drawerLayout.openDrawer(Gravity.START);
+        }
+    }
+
+    private void openDrawer() {
+        drawerLayout.openDrawer(Gravity.START);
+    }
+
+    private void closeDrawer() {
+        drawerLayout.closeDrawer(Gravity.START);
+    }
+
     @Override
     public void init() {
-
+        imageSlider.setVisibility(View.GONE);
+        if (BaseApplication.isFirstRun()) {
+            openDrawer();
+        }
+        getBaseActivity().setDrawer(drawerLayout, Gravity.START);
+        leftDrawer.setClickCallback(this);
     }
 
     @Override
@@ -60,7 +88,7 @@ public class FragmentHome extends BaseFragment implements NewsController.NewsLoa
         topbar.setIcon(R.drawable.ic_launcher, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showToast("icon click.");
+                toggleDrawer();
             }
         });
     }
@@ -79,7 +107,6 @@ public class FragmentHome extends BaseFragment implements NewsController.NewsLoa
 
     @Override
     public void loadSliderNewsSuccess(List<SliderNews> sliderNewses) {
-        imageSlider.setVisibility(View.GONE);
         if (!CollectionUtils.isEmpty(sliderNewses)) {
             for (final SliderNews news : sliderNewses) {
                 TextSliderView txtView = new TextSliderView(getBaseActivity());
@@ -94,9 +121,14 @@ public class FragmentHome extends BaseFragment implements NewsController.NewsLoa
 
             imageSlider.setPresetTransformer(SliderLayout.Transformer.Default);
             imageSlider.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
-            imageSlider.setDuration(5000);
+            imageSlider.setDuration(3000);
             imageSlider.setCurrentPosition(0);
-            imageSlider.setVisibility(View.VISIBLE);
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    imageSlider.setVisibility(View.VISIBLE);
+                }
+            }, 1000);
         }
     }
 
@@ -110,6 +142,26 @@ public class FragmentHome extends BaseFragment implements NewsController.NewsLoa
     @Override
     public void loadNewsFailure(String errorMessage) {
         showToast(errorMessage);
+    }
+
+    @Override
+    public void jobItemClicked() {
+        closeDrawer();
+    }
+
+    @Override
+    public void levelItemClicked() {
+        closeDrawer();
+    }
+
+    @Override
+    public void heroItemClicked() {
+        closeDrawer();
+    }
+
+    @Override
+    public void diabloDBItemClicked() {
+        closeDrawer();
     }
 
     class HomeListAdapter extends BaseAdapter {

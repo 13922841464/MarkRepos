@@ -24,15 +24,15 @@ public class FragmentRequest {
     }
 
     public FragmentRequest(FragmentType fragmentType, Class<? extends BaseFragment> fragmentClass) {
-        this(FragmentType.APP, fragmentClass, null);
+        this(fragmentType, fragmentClass, null);
     }
 
     public FragmentRequest(FragmentType fragmentType, Class<? extends BaseFragment> fragmentClass, Bundle data) {
-        this(FragmentType.APP, fragmentClass, false, data);
+        this(fragmentType, fragmentClass, false, data);
     }
 
     public FragmentRequest(FragmentType fragmentType, Class<? extends BaseFragment> fragmentClass, boolean fullScreen, Bundle data) {
-        this(FragmentType.APP, fragmentClass, true, false, data);
+        this(fragmentType, fragmentClass, true, fullScreen, data);
     }
 
     public FragmentRequest(FragmentType fragmentType, Class<? extends BaseFragment> fragmentClass, boolean addBackStack, boolean fullScreen, Bundle data) {

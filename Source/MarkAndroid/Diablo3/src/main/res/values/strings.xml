@@ -5,4 +5,16 @@
     <string name="lang_en">English</string>
     <string name="lang_zh">简体中文</string>
     <string name="lang_zh_tw">繁体中文</string>
+
+    <!-- Drawer -->
+    <string name="job_title">职业攻略</string>
+    <string name="Barbarian">野蛮人</string>
+    <string name="WitchDoctor">巫医</string>
+    <string name="Wizard">魔法师</string>
+    <string name="Monk">武僧</string>
+    <string name="DemonHunter">猎魔人</string>
+    <string name="Crusader">圣教军</string>
+    <string name="level_top">天梯排名</string>
+    <string name="hero_top">英雄排名</string>
+    <string name="diablo_db">数据库</string>
 </resources>

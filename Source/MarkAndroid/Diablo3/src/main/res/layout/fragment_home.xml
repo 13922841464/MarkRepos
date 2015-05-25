@@ -1,53 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:resauto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.markzhai.library.widget.MZTopbar
-        android:id="@id/topbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height_topbar"
-        resauto:topbar_title="@string/app_name" />
-
-    <com.markzhai.library.widget.slider.SliderLayout
-        android:id="@+id/home_slider"
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:layout_below="@+id/topbar"
-        resauto:auto_cycle="true"
-        resauto:indicator_visibility="visible"
-        resauto:pager_animation="Accordion"
-        resauto:pager_animation_span="1100" />
-
-    <com.markzhai.library.widget.slider.Indicators.PagerIndicator
-        android:id="@+id/slider_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        resauto:selected_color="#0095BF"
-        resauto:selected_height="6dp"
-        resauto:selected_padding_left="5dp"
-        resauto:selected_padding_right="5dp"
-        resauto:selected_width="6dp"
-        resauto:shape="oval"
-        resauto:unselected_color="#55333333"
-        resauto:unselected_height="6dp"
-        resauto:unselected_padding_left="5dp"
-        resauto:unselected_padding_right="5dp"
-        resauto:unselected_width="6dp" />
-
-    <ListView
-        android:id="@+id/home_list"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/home_slider"
-        android:divider="@color/transparent"
-        android:dividerHeight="@dimen/margin_small_more"
-        android:padding="@dimen/margin_small_more"
-        android:scrollbars="none" />
+        android:background="@color/color_bg_base">
 
-</RelativeLayout>
+        <com.markzhai.library.widget.MZTopbar
+            android:id="@id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_topbar"
+            resauto:topbar_title="@string/app_name" />
+
+        <com.markzhai.library.widget.slider.SliderLayout
+            android:id="@+id/home_slider"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_below="@+id/topbar"
+            resauto:auto_cycle="true"
+            resauto:indicator_visibility="visible"
+            resauto:pager_animation="Accordion"
+            resauto:pager_animation_span="1100" />
+
+        <com.markzhai.library.widget.slider.Indicators.PagerIndicator
+            android:id="@+id/slider_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            resauto:selected_color="#0095BF"
+            resauto:selected_height="6dp"
+            resauto:selected_padding_left="5dp"
+            resauto:selected_padding_right="5dp"
+            resauto:selected_width="6dp"
+            resauto:shape="oval"
+            resauto:unselected_color="#55333333"
+            resauto:unselected_height="6dp"
+            resauto:unselected_padding_left="5dp"
+            resauto:unselected_padding_right="5dp"
+            resauto:unselected_width="6dp" />
+
+        <ListView
+            android:id="@+id/home_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/home_slider"
+            android:background="@color/color_bg_base"
+            android:divider="@color/transparent"
+            android:dividerHeight="@dimen/margin_small_more"
+            android:padding="@dimen/margin_small_more"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/color_bg_drawer">
+
+        <com.markzhai.diablo3.core.view.widget.LeftDrawer
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
