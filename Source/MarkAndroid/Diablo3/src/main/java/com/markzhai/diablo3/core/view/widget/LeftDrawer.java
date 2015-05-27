@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.markzhai.diablo3.R;
 
@@ -63,6 +64,7 @@ public class LeftDrawer extends RelativeLayout implements View.OnClickListener {
         levelItem.setOnClickListener(this);
         heroItem.setOnClickListener(this);
         diabloDBItem.setOnClickListener(this);
+        rootView.setOnClickListener(this);
 
         addView(rootView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }

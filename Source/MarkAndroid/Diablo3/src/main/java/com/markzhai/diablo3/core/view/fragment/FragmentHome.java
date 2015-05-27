@@ -147,6 +147,7 @@ public class FragmentHome extends BaseFragment implements NewsController.NewsLoa
     @Override
     public void jobItemClicked() {
         closeDrawer();
+        startFragment(FragmentJobIntro.class);
     }
 
     @Override

@@ -125,6 +125,10 @@ public abstract class BaseActivity extends RoboFragmentActivity {
         return defaultFragmentManager.getCurrentFragment();
     }
 
+    public void back() {
+        onBackPressed();
+    }
+
     @Override
     public void onBackPressed() {
         if (drawer != null && drawer.isDrawerOpen(drawerGravity)) {
